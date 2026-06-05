@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<!-- saved from url=(0235)file:///Users/lijiaxu/Library/Application%20Support/Claude/local-agent-mode-sessions/646e3572-9420-4a5d-9546-17df1e9d7274/a3f30102-87a0-4065-a45d-6c6a6d08a548/local_79ee1925-a541-4d7c-80b4-8909523862cb/outputs/golf_cart_report.html#ch4 -->
+<html lang="zh-CN" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>高尔夫手推车市场深度调研报告</title>
+<script src="./高尔夫手推车市场深度调研报告_files/chart.umd.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./高尔夫手推车市场深度调研报告_files/css2" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F4F1EA;
+    --paper:#FBFAF6;
+    --navy:#0A2540;
+    --navy2:#21456C;
+    --blue:#5B7DA6;
+    --blue-soft:#E7ECF2;
+    --accent:#B5894B;
+    --accent-soft:#F0E7D6;
+    --gray:#6A6E76;
+    --gray-light:#C8C4B8;
+    --line:#E2DDD0;
+    --white:#FBFAF6;
+    --nav-w:280px;
+    --serif:'Fraunces','Noto Serif SC',Georgia,'Songti SC',serif;
+    --sans:'Manrope','Noto Sans SC',-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--sans);
+    background:var(--bg);color:var(--navy);line-height:1.65;font-size:15px;
+    -webkit-font-smoothing:antialiased;
+  }
+  /* 纸张颗粒纹理 */
+  body::before{
+    content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.04;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  /* 阅读进度条 */
+  #progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:10000;transition:width .1s linear;}
+
+  /* ---------- 左侧固定导航 ---------- */
+  nav.sidebar{
+    position:fixed;top:0;left:0;width:var(--nav-w);height:100vh;
+    background:var(--navy);color:#fff;overflow-y:auto;padding:38px 0 24px;z-index:100;
+    background-image:radial-gradient(circle at 100% 0%,rgba(181,137,75,.18) 0%,transparent 45%);
+  }
+  nav.sidebar .brand{padding:0 28px 26px;margin-bottom:14px;position:relative;}
+  nav.sidebar .brand::after{content:"";position:absolute;left:28px;right:28px;bottom:0;height:1px;background:rgba(255,255,255,.14);}
+  nav.sidebar .brand h1{font-family:var(--serif);font-size:21px;font-weight:600;letter-spacing:.3px;line-height:1.35;}
+  nav.sidebar .brand span{font-size:11px;color:#9FB3CA;display:block;margin-top:10px;font-weight:400;letter-spacing:.5px;}
+  nav.sidebar ul{list-style:none;}
+  nav.sidebar li a{
+    display:flex;align-items:baseline;gap:10px;padding:9px 28px;color:#B9C6D8;text-decoration:none;font-size:13.5px;
+    border-left:2px solid transparent;transition:all .25s cubic-bezier(.4,0,.2,1);
+  }
+  nav.sidebar li a:hover{background:rgba(255,255,255,.05);color:#fff;padding-left:32px;}
+  nav.sidebar li a.active{background:linear-gradient(90deg,rgba(181,137,75,.16),transparent);color:#fff;border-left-color:var(--accent);font-weight:600;}
+  nav.sidebar li a .num{color:var(--accent);font-size:11px;font-family:var(--serif);font-style:italic;min-width:20px;}
+  nav.sidebar .foot{padding:22px 28px 0;font-size:11px;color:#67809B;line-height:1.7;}
+
+  /* ---------- 主内容 ---------- */
+  main{margin-left:var(--nav-w);}
+  section.slide{
+    min-height:100vh;padding:84px 88px;position:relative;
+    display:flex;flex-direction:column;justify-content:center;
+    border-bottom:1px solid var(--line);
+  }
+  section.slide:not(.cover)::after{content:"";position:absolute;left:88px;right:88px;bottom:0;height:1px;background:linear-gradient(90deg,var(--line),transparent);}
+
+  /* 入场动画（仅在 JS 可用时隐藏，避免无脚本时内容永久不可见） */
+  html.js section.slide > *{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);}
+  html.js section.slide.visible > *{opacity:1;transform:none;}
+  section.slide.visible > *:nth-child(1){transition-delay:.04s}
+  section.slide.visible > *:nth-child(2){transition-delay:.10s}
+  section.slide.visible > *:nth-child(3){transition-delay:.16s}
+  section.slide.visible > *:nth-child(4){transition-delay:.22s}
+  section.slide.visible > *:nth-child(5){transition-delay:.28s}
+  section.slide.visible > *:nth-child(6){transition-delay:.34s}
+  section.slide.visible > *:nth-child(7){transition-delay:.40s}
+  section.slide.visible > *:nth-child(n+8){transition-delay:.46s}
+
+  .sec-tag{
+    display:inline-flex;align-items:center;gap:12px;font-size:11px;font-weight:700;letter-spacing:3px;color:var(--accent);
+    text-transform:uppercase;margin-bottom:18px;
+  }
+  .sec-tag::before{content:"";width:34px;height:1px;background:var(--accent);}
+  h2.sec-title{font-family:var(--serif);font-size:40px;font-weight:600;color:var(--navy);margin-bottom:12px;letter-spacing:-.5px;line-height:1.1;}
+  .sec-sub{font-size:15.5px;color:var(--gray);margin-bottom:40px;max-width:820px;line-height:1.7;}
+  h3.block-title{
+    font-family:var(--serif);font-size:21px;font-weight:600;color:var(--navy);margin:38px 0 18px;
+    padding-left:14px;border-left:3px solid var(--accent);line-height:1.3;
+  }
+  h3.block-title:first-of-type{margin-top:0;}
+
+  /* 占位注解块 */
+  .placeholder{
+    border:1.5px dashed var(--gray-light);border-radius:4px;background:rgba(255,255,255,.5);
+    padding:24px 28px;color:var(--gray);font-size:14px;margin-bottom:20px;
+  }
+  .placeholder .ph-head{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--navy2);margin-bottom:8px;font-size:13.5px;}
+  .placeholder .ph-head .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);}
+  .placeholder .src{display:inline-block;margin-top:10px;font-size:12px;color:var(--navy2);background:var(--accent-soft);padding:3px 10px;border-radius:3px;}
+  .placeholder ul{margin:8px 0 0 18px;}
+  .placeholder ul li{margin-bottom:4px;}
+
+  /* 网格 */
+  .grid{display:grid;gap:18px;}
+  .grid-2{grid-template-columns:repeat(2,1fr);}
+  .grid-3{grid-template-columns:repeat(3,1fr);}
+  .grid-4{grid-template-columns:repeat(4,1fr);}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:24px;transition:transform .3s ease,box-shadow .3s ease;}
+  .card:hover{transform:translateY(-3px);box-shadow:0 14px 34px -18px rgba(10,37,64,.32);}
+  .card h4{font-size:15px;color:var(--navy);margin-bottom:10px;font-weight:700;}
+  .card p{font-size:13.5px;color:var(--gray);line-height:1.7;}
+  .card:has(.kpi){display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:150px;position:relative;overflow:hidden;}
+  .card:has(.kpi)::before{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--accent),transparent);}
+  .kpi{font-family:var(--serif);font-size:38px;font-weight:600;color:var(--navy);letter-spacing:-1px;line-height:1.05;}
+  .kpi-label{font-size:12.5px;color:var(--gray);margin-top:10px;line-height:1.5;}
+
+  /* 图表 & 结论框 */
+  .chart-box{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:20px 22px;transition:box-shadow .3s ease;}
+  .chart-box:hover{box-shadow:0 14px 34px -20px rgba(10,37,64,.28);}
+  .chart-box .ch-title{font-family:var(--serif);font-size:16px;font-weight:600;color:var(--navy);margin-bottom:4px;}
+  .chart-box .ch-note{font-size:11.5px;color:var(--gray);margin-bottom:14px;}
+  .chart-wrap{position:relative;height:230px;}
+  .finding{background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:4px;padding:16px 20px;margin-bottom:14px;font-size:13.5px;color:var(--navy2);line-height:1.75;}
+  .finding strong{color:var(--navy);font-weight:700;}
+  .tag-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px;}
+  .tag-row .src{display:inline-block;font-size:12px;color:var(--navy2);background:var(--accent-soft);padding:4px 12px;border-radius:3px;letter-spacing:.2px;}
+  .data-tbl{width:100%;border-collapse:collapse;font-size:13px;background:var(--paper);margin-top:6px;}
+  .data-tbl th,.data-tbl td{border:1px solid var(--line);padding:10px 12px;text-align:left;}
+  .data-tbl th{background:var(--navy);color:#fff;font-weight:600;letter-spacing:.3px;}
+  .data-tbl td{color:var(--navy2);}
+  .data-tbl tr:nth-child(even) td{background:rgba(10,37,64,.025);}
+  .data-tbl .em{font-weight:700;color:var(--navy);}
+  .data-tbl td.yes{color:#3F7D5A;font-weight:700;text-align:center;}
+  .data-tbl td.no{color:var(--gray-light);text-align:center;}
+  .rev-card{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:20px 22px;transition:box-shadow .3s ease;}
+  .rev-card:hover{box-shadow:0 14px 34px -20px rgba(10,37,64,.28);}
+  .rev-card .rh{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--navy);margin-bottom:2px;}
+  .rev-card .rmeta{font-size:11.5px;color:var(--gray);margin-bottom:14px;}
+  .rev-blk{margin-bottom:14px;}
+  .rev-blk .lbl{font-size:12px;font-weight:700;padding:3px 9px;border-radius:3px;display:inline-block;margin-bottom:7px;letter-spacing:.3px;}
+  .lbl.neg{background:#F3E1DD;color:#A64A3E;}
+  .lbl.pos{background:#E1EDE5;color:#356B4F;}
+  .lbl.hid{background:var(--accent-soft);color:var(--navy2);}
+  .rev-blk .pt{font-size:13px;color:var(--navy2);margin-bottom:6px;line-height:1.65;}
+  .quote{font-size:12px;color:var(--gray);border-left:2px solid var(--accent);padding:3px 0 3px 12px;margin:5px 0;font-style:italic;line-height:1.6;}
+  /* 表格占位 */
+  .tbl-ph{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;background:var(--paper);}
+  .tbl-ph th,.tbl-ph td{border:1px solid var(--line);padding:9px 12px;text-align:left;}
+  .tbl-ph th{background:var(--navy);color:#fff;font-weight:600;}
+  .tbl-ph td{color:var(--gray-light);}
+
+  /* 折叠 */
+  details.fold{background:var(--paper);border:1px solid var(--line);border-radius:4px;margin-bottom:14px;overflow:hidden;}
+  details.fold summary{
+    cursor:pointer;padding:16px 22px;font-weight:700;color:var(--navy);font-size:14.5px;
+    list-style:none;display:flex;align-items:center;gap:10px;background:var(--accent-soft);transition:background .2s;
+  }
+  details.fold summary:hover{background:#EAE0CC;}
+  details.fold summary::-webkit-details-marker{display:none;}
+  details.fold summary::before{content:"+";color:var(--accent);font-size:18px;transition:transform .25s;line-height:1;}
+  details.fold[open] summary::before{transform:rotate(45deg);}
+  details.fold .fold-body{padding:22px;}
+
+  /* 封面 */
+  section.cover{
+    background:var(--navy);color:#fff;align-items:flex-start;overflow:hidden;
+    background-image:
+      radial-gradient(ellipse 60% 80% at 85% 15%,rgba(181,137,75,.28) 0%,transparent 55%),
+      radial-gradient(ellipse 70% 70% at 10% 90%,rgba(91,125,166,.30) 0%,transparent 55%),
+      linear-gradient(135deg,#08203A 0%,#0A2540 50%,#143055 100%);
+  }
+  section.cover::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.04'%3E%3Cpath d='M0 50h100M50 0v100'/%3E%3C/g%3E%3C/svg%3E");pointer-events:none;}
+  section.cover > *{position:relative;}
+  section.cover .sec-tag{color:var(--accent);}
+  section.cover .sec-tag::before{background:var(--accent);}
+  section.cover h1{font-family:var(--serif);font-size:60px;font-weight:600;letter-spacing:-1.5px;line-height:1.08;max-width:900px;}
+  section.cover .cover-sub{font-size:18px;color:#C3D0E0;margin-top:24px;max-width:680px;font-weight:400;line-height:1.7;}
+  section.cover .cover-meta{margin-top:64px;display:flex;gap:56px;border-top:1px solid rgba(255,255,255,.18);padding-top:26px;}
+  section.cover .cover-meta div span{display:block;font-size:11px;color:#8295AD;letter-spacing:2px;text-transform:uppercase;}
+  section.cover .cover-meta div strong{font-family:var(--serif);font-size:19px;font-weight:500;color:#fff;margin-top:4px;display:block;}
+  .src-list{font-size:13px;color:#A9BAD0;margin-top:8px;}
+
+  @media(max-width:900px){
+    :root{--nav-w:0px;}
+    nav.sidebar{display:none;}
+    section.slide{padding:52px 26px;}
+    section.slide::after{left:26px;right:26px;}
+    section.cover h1{font-size:38px;}
+    h2.sec-title{font-size:30px;}
+    .grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+<div id="progress" style="width: 42.9133%;"></div>
+
+<nav class="sidebar">
+  <div class="brand">
+    <h1>高尔夫手推车<br>市场深度调研报告</h1>
+    <span>多维数据洞察 · 跨境选品决策参考</span>
+  </div>
+  <ul>
+    <li><a href="#cover"><span class="num">00</span>封面</a></li>
+    <li><a href="#summary"><span class="num">01</span>执行摘要</a></li>
+    <li><a href="#ch1"><span class="num">02</span>市场规模与增长</a></li>
+    <li><a href="#ch2"><span class="num">03</span>市场需求与趋势</a></li>
+    <li><a href="#ch3"><span class="num">04</span>市场形态及趋势</a></li>
+    <li><a href="#ch4"><span class="num">05</span>竞争格局</a></li>
+    <li><a href="#ch5"><span class="num">06</span>价格判断</a></li>
+    <li><a href="#ch6"><span class="num">07</span>用户需求与痛点</a></li>
+    <li><a href="#ch7"><span class="num">08</span>竞品分析</a></li>
+    <li><a href="#ch8"><span class="num">09</span>结论</a></li>
+  </ul>
+  <div class="foot">报告日期：2026年6月<br>数据：亚马逊 · 行业报告 · 用户评论</div>
+</nav>
+
+<main>
+
+<!-- 封面 -->
+<section class="slide cover visible" id="cover">
+  <span class="sec-tag">市场调研报告</span>
+  <h1>高尔夫手推车市场深度调研报告</h1>
+  <p class="cover-sub">基于亚马逊、YouTube、TikTok、Reddit、用户评论等多维数据洞察</p>
+  <div class="cover-meta">
+    <div><span>报告日期</span><strong>2026年6月</strong></div>
+    <div><span>视角</span><strong>跨境出口</strong></div>
+    <div><span>面向</span><strong>各部门</strong></div>
+  </div>
+</section>
+
+<!-- 执行摘要 -->
+<section class="slide visible" id="summary">
+  <span class="sec-tag">Executive Summary</span>
+  <h2 class="sec-title">执行摘要</h2>
+  <p class="sec-sub">用最简单的话，告诉所有部门"这个市场值不值得做、怎么做"。</p>
+  <div class="grid grid-4">
+    <div class="card"><div class="kpi">$2,484万</div><div class="kpi-label">亚马逊美国近12个月销售额（同比 +2.9%）</div></div>
+    <div class="card"><div class="kpi">手推车</div><div class="kpi-label">建议优先进入的品类（占8成市场）</div></div>
+    <div class="card"><div class="kpi">$169–219</div><div class="kpi-label">手推车建议定价区间</div></div>
+    <div class="card"><div class="kpi">手刹</div><div class="kpi-label">最大空白机会点（竞品全缺）</div></div>
+  </div>
+  <div class="finding" style="margin-top:20px;"><strong>1 · 市场值得做、但靠"质"不靠"量"。</strong>全球约 4 亿美元、稳健增长（CAGR 5.7–6.2%），亚马逊美国近一年销售额 +2.9% 但销量 −4.4%——增长来自<strong>涨价与消费升级</strong>，平均价从约 $190 升至 $210–235。</div>
+  <div class="finding"><strong>2 · 先做手推车，电动作第二曲线。</strong>手推车占 8 成、缝隙清晰（CR3 71%、非垄断）；电动增速最快（+6.2%）但被 MGI 寡头垄断、半年无新进入者、门槛极高。</div>
+  <div class="finding"><strong>3 · 用户是"想走路健身、又怕累着身体"的步行球友。</strong>看重轻便、易折叠、不刮包；电动买家更成熟、更愿为性能付费。</div>
+  <div class="finding"><strong>4 · 竞品差评最痛三处 = 我们的机会：</strong>前轮刮包（50%）、小件易坏（39%）、售后慢（38%）。</div>
+  <div class="finding" style="margin-bottom:0;background:var(--navy);border-left-color:var(--accent);color:#fff;"><strong style="color:#fff;">5 · 打法一句话：</strong>做 $169–219 的手推车，用 <strong style="color:var(--accent);">"手刹 + 前轮零刮包 + 配件可补 + 站外内容"</strong> 正面打竞品差评最痛处。</div>
+</section>
+
+<!-- 第一章 -->
+<section class="slide visible" id="ch1">
+  <span class="sec-tag">Chapter 01</span>
+  <h2 class="sec-title">第一章 · 市场规模与增长</h2>
+  <p class="sec-sub">一句话：这是一个规模适中（全球约 4 亿美元）、增长稳健（年增 5%–6%）的细分赛道，电动化是最确定的方向，线上（尤其亚马逊）是跨境卖家的主战场。</p>
+
+  <h3 class="block-title">A. 宏观市场分析（全球 + 北美）</h3>
+  <div class="tag-row"><span class="src">数据来源：高尔夫手推车行业报告</span></div>
+
+  <div class="grid grid-4" style="margin-bottom:22px;">
+    <div class="card"><div class="kpi">≈4亿</div><div class="kpi-label">2024 全球市场规模（美元）</div></div>
+    <div class="card"><div class="kpi">5.7–6.2%</div><div class="kpi-label">未来年复合增速 CAGR</div></div>
+    <div class="card"><div class="kpi">36–52%</div><div class="kpi-label">北美市场占比（美国占北美约86%）</div></div>
+    <div class="card"><div class="kpi">≈44%</div><div class="kpi-label">线上渠道占比（增速约9%，最快）</div></div>
+  </div>
+
+  <div class="grid grid-2">
+    <div class="chart-box">
+      <div class="ch-title">产品结构：人力 vs 电动</div>
+      <div class="ch-note">当前以人力为主，但电动子品类增速显著更快（CAGR 7%–8.5%），市场正持续电动化迁移</div>
+      <div class="chart-wrap"><canvas id="c1_struct" width="858" height="460" style="display: block; box-sizing: border-box; height: 230px; width: 429px;"></canvas></div>
+    </div>
+    <div class="chart-box">
+      <div class="ch-title">线上销售平台占比估算（北美）</div>
+      <div class="ch-note">亚马逊是品类线上销售绝对主力（搜索式购买 + Best Seller 效应明显）· 行业报告估算值</div>
+      <div class="chart-wrap"><canvas id="c1_plat" width="858" height="460" style="display: block; box-sizing: border-box; height: 230px; width: 429px;"></canvas></div>
+    </div>
+  </div>
+
+  <div class="finding" style="margin-top:18px;">
+    <strong>宏观结论：</strong>规模适中、增速稳健；<strong>电动跟随推车</strong>是增长最快的子品类，正逐步替代纯人力手推车；<strong>美国</strong>是首要目标市场；<strong>线上（亚马逊为核心）</strong>是增量与利润的主战场。轻量化、易折叠、长续航、兼容各类球包是核心卖点。
+  </div>
+
+  <h3 class="block-title">B. 亚马逊美国市场销售分析</h3>
+  <div class="tag-row">
+    <span class="src">数据来源：高尔夫推车「亚马逊」表 · 「谷歌趋势」表</span>
+    <span class="src">口径：近24个月（2024.05–2026.04）月度在架商品汇总</span>
+  </div>
+
+  <div class="grid grid-4" style="margin-bottom:22px;">
+    <div class="card"><div class="kpi">$2,484万</div><div class="kpi-label">近12个月销售额（子体销售额）</div></div>
+    <div class="card"><div class="kpi">+2.9%</div><div class="kpi-label">销售额同比（vs 前12个月）</div></div>
+    <div class="card"><div class="kpi">12.8万</div><div class="kpi-label">近12个月销量（子体销量，同比 −4.4%）</div></div>
+    <div class="card"><div class="kpi">$193</div><div class="kpi-label">近12个月平均客单价</div></div>
+  </div>
+
+  <div class="grid grid-2">
+    <div class="chart-box">
+      <div class="ch-title">B1 · 近24个月销售额 &amp; 销量趋势</div>
+      <div class="ch-note">销售额（柱·左轴，美元）与销量（线·右轴，件）· 月度</div>
+      <div class="chart-wrap"><canvas id="c1_sales" width="858" height="460" style="display: block; box-sizing: border-box; height: 230px; width: 429px;"></canvas></div>
+    </div>
+    <div class="chart-box">
+      <div class="ch-title">B2 · 近24个月平均价格 &amp; 价格同比</div>
+      <div class="ch-note">平均价格（线·左轴，美元）与价格同比（柱·右轴，%）· 月度</div>
+      <div class="chart-wrap"><canvas id="c1_price" width="858" height="460" style="display: block; box-sizing: border-box; height: 230px; width: 429px;"></canvas></div>
+    </div>
+    <div class="chart-box">
+      <div class="ch-title">B3 · 季节性分析（按月份平均销售额）</div>
+      <div class="ch-note">两年同月平均 · 识别旺季与淡季</div>
+      <div class="chart-wrap"><canvas id="c1_season" width="858" height="460" style="display: block; box-sizing: border-box; height: 230px; width: 429px;"></canvas></div>
+    </div>
+    <div class="chart-box">
+      <div class="ch-title">B4 · 谷歌搜索热度趋势（golf push cart）</div>
+      <div class="ch-note">搜索指数 · 与销售季节性相互印证</div>
+      <div class="chart-wrap"><canvas id="c1_google" width="858" height="460" style="display: block; box-sizing: border-box; height: 230px; width: 429px;"></canvas></div>
+    </div>
+  </div>
+
+  <div class="finding" style="margin-top:18px;">
+    <strong>亚马逊市场结论：</strong>市场总量稳定，近12个月销售额约 <strong>2,484 万美元、同比 +2.9%</strong>，但销量同比 <strong>−4.4%</strong>——说明<strong>增长主要靠涨价而非走量</strong>，平均价格从约 $190 升至约 $210–235，价格中枢上移、消费升级（电动/高配化）趋势明显。
+    需求<strong>季节性极强</strong>：旺季为 <strong>4–6 月（开球季）和 11–12 月（节日季）</strong>，淡季为 <strong>1–2 月和 9–10 月</strong>，谷歌搜索热度与销售曲线高度吻合，建议据此安排备货与广告节奏。
+  </div>
+</section>
+
+<!-- 第二章 -->
+<section class="slide visible" id="ch2">
+  <span class="sec-tag">Chapter 02</span>
+  <h2 class="sec-title">第二章 · 市场需求与趋势</h2>
+  <p class="sec-sub">一句话：社媒上大家最常聊的是<strong>稳定性/坡道表现、电动化、性价比和品牌对比</strong>；搜索端需求高度集中在"golf push cart"主词，且<strong>三轮、袋车、品牌词</strong>是稳定的高购买意向入口。</p>
+
+  <h3 class="block-title">A. 社媒需求分析（三平台共 7,100+ 条讨论）</h3>
+  <div class="tag-row"><span class="src">数据来源：人群画像.xlsx · Reddit(1,445) / YouTube(942) / TikTok(4,720)</span></div>
+  <div class="grid grid-3">
+    <div class="card"><h4>Reddit · 深度选购讨论</h4>
+      <p><strong>关注点：</strong>品牌对比(15%)、稳定/坡道(14%)、电动遥控(10%)、性价比(10%)。<br><strong>场景：</strong>"想走路健身但球友都坐车"、换代升级旧车。<br><strong>新功能/材料：</strong>常点名 Clicgear/Bag Boy Nitron/Sun Mountain，强调"折叠要小、无多余零件、铝合金轻量"。</p>
+    </div>
+    <div class="card"><h4>YouTube · 评测驱动</h4>
+      <p><strong>关注点：</strong>稳定/坡道(15%)、电动遥控(13%)、性价比(8%)。<br><strong>场景：</strong>看测评决定是否升级、关注细节做工。<br><strong>新功能/材料：</strong>称赞"手机架、音乐扩音槽、外观设计"，吐槽"杯架旋钮易松"——细节体验是评测焦点。</p>
+    </div>
+    <div class="card"><h4>TikTok · 大众种草</h4>
+      <p><strong>关注点：</strong>走路/健康(5%)、稳定(3%)、性价比(3%)。<br><strong>场景：</strong>展示走路打球的生活方式、晒装备。<br><strong>新功能/材料：</strong>有声量直接喊"要手刹不要脚刹，坡道方便太多"——验证手刹需求。</p>
+    </div>
+  </div>
+  <div class="finding" style="margin-top:14px;"><strong>跨平台共识：</strong>"稳定/坡道表现"是所有平台第一关注点；"电动化"讨论热度高；"手刹"虽提及率低但呼声明确具体——是被忽视的真实需求。中国卖家可重点经营 YouTube 评测与 TikTok 场景内容（竞品站外薄弱）。</div>
+
+  <h3 class="block-title">B. 核心搜索词分析（需求入口）</h3>
+  <div class="tag-row"><span class="src">数据来源：高尔夫推车「核心关键词」表 · 亚马逊 ABA 月搜索/购买</span></div>
+  <table class="data-tbl">
+    <tbody><tr><th>核心搜索词</th><th>含义</th><th>月搜索量</th><th>购买率</th><th>解读</th></tr>
+    <tr><td class="em">golf push cart</td><td>高尔夫手推车</td><td>120,378</td><td>2.2%</td><td>绝对主词，流量必争</td></tr>
+    <tr><td>golf bag cart</td><td>球袋车</td><td>25,860</td><td>2.2%</td><td>第二大通用词</td></tr>
+    <tr><td>golf push cart 3 wheel</td><td>三轮手推车</td><td>22,180</td><td class="em">2.9%</td><td>三轮是主流形态、购买意向高</td></tr>
+    <tr><td>golf pull cart</td><td>拉车</td><td>18,740</td><td class="em">2.8%</td><td>意向高</td></tr>
+    <tr><td>clicgear / caddytek push cart</td><td>品牌词</td><td>13,313 / 11,521</td><td class="em">3.3–3.8%</td><td>品牌词购买率最高，品牌心智=高转化</td></tr>
+  </tbody></table>
+  <div class="finding" style="margin-top:12px;">需求高度集中在 <strong>"golf push cart" 主词</strong>；<strong>三轮、拉车、袋车</strong>是高购买率的精准词；<strong>品牌词购买率最高（3.3–3.8%）</strong>——印证品牌心智直接带来转化，做品牌内容值得投入。</div>
+
+  <h3 class="block-title">C. 核心搜索词趋势（需求季节性）</h3>
+  <div class="chart-box">
+    <div class="ch-title">主要搜索词近13个月走势</div>
+    <div class="ch-note">月搜索量 · 数据来源：核心搜索词趋势表</div>
+    <div class="chart-wrap" style="height:280px;"><canvas id="c2_kw" width="1844" height="560" style="display: block; box-sizing: border-box; height: 280px; width: 922px;"></canvas></div>
+  </div>
+  <div class="finding" style="margin-top:14px;">三条曲线<strong>同步起伏</strong>：1–2 月触底、随后一路爬升到 <strong>4 月旺季高点（golf push cart 达 12 万）</strong>，9–12 月回落——与第一章销售季节性、谷歌趋势完全吻合。<strong>2–4 月搜索快速上行</strong>是新品冲刺与广告抢位的黄金窗口。</div>
+</section>
+
+<!-- 第三章 -->
+<section class="slide visible" id="ch3">
+  <span class="sec-tag">Chapter 03</span>
+  <h2 class="sec-title">第三章 · 市场形态及趋势</h2>
+  <p class="sec-sub">一句话：亚马逊上 <strong>普通手推车是绝对主体（约8成）</strong>，电动手推车是高增长的第二梯队，简易手推车体量小且基本不增长。</p>
+  <div class="tag-row"><span class="src">数据来源：高尔夫推车「亚马逊」表 · 分类/子体销售额/日期/商品主图/N–AG列</span></div>
+
+  <div class="grid grid-2">
+    <div class="chart-box">
+      <div class="ch-title">A. 各品类近12个月销售额占比</div>
+      <div class="ch-note">总销售额约 $2,484 万 · 子体销售额口径</div>
+      <div class="chart-wrap"><canvas id="c3_share" width="858" height="460" style="display: block; box-sizing: border-box; height: 230px; width: 429px;"></canvas></div>
+    </div>
+    <div class="chart-box">
+      <div class="ch-title">B. 各品类两年销售趋势</div>
+      <div class="ch-note">月度子体销售额 · 同比增速见下方</div>
+      <div class="chart-wrap"><canvas id="c3_trend" width="858" height="460" style="display: block; box-sizing: border-box; height: 230px; width: 429px;"></canvas></div>
+    </div>
+  </div>
+
+  <div class="grid grid-3" style="margin-top:16px;">
+    <div class="card"><div class="kpi">$2,042万</div><div class="kpi-label">手推车 · 占比82.2% · 同比 +2.4%</div></div>
+    <div class="card"><div class="kpi">$371万</div><div class="kpi-label">电动手推车 · 占比14.9% · 同比 +6.2%</div></div>
+    <div class="card"><div class="kpi">$72万</div><div class="kpi-label">简易手推车 · 占比2.9% · 同比 +0.3%</div></div>
+  </div>
+  <div class="finding" style="margin-top:14px;">手推车体量最大但增长温和（+2.4%）；<strong>电动手推车增速最快（+6.2%）</strong>，是结构升级的主线；简易手推车几乎零增长，赛道价值有限。</div>
+
+  <h3 class="block-title">C. 各品类代表机型（亚马逊销量最高款）</h3>
+  <div class="grid grid-3">
+    <div class="card" style="text-align:center;">
+      <img src="./高尔夫手推车市场深度调研报告_files/617Ayv8ydLL._AC_US600_.jpg" alt="手推车" style="height:150px;object-fit:contain;margin-bottom:10px;">
+      <h4>手推车 · KVV</h4><p style="font-size:12px;">ASIN B08FQYHX2Q · 销量冠军款</p>
+    </div>
+    <div class="card" style="text-align:center;">
+      <img src="./高尔夫手推车市场深度调研报告_files/61Zrw0v+HML._AC_US600_.jpg" alt="电动手推车" style="height:150px;object-fit:contain;margin-bottom:10px;">
+      <h4>电动手推车 · MGI</h4><p style="font-size:12px;">ASIN B0CTLQFN7C · 销量冠军款</p>
+    </div>
+    <div class="card" style="text-align:center;">
+      <img src="./高尔夫手推车市场深度调研报告_files/61KJPom-flL._AC_US600_.jpg" alt="简易手推车" style="height:150px;object-fit:contain;margin-bottom:10px;">
+      <h4>简易手推车 · Caddytek</h4><p style="font-size:12px;">ASIN B0CLNHWQB4 · 销量冠军款</p>
+    </div>
+  </div>
+
+  <h3 class="block-title">D. 结构配置偏好（近3个月在架机型）</h3>
+  <div class="grid grid-2">
+    <div class="chart-box">
+      <div class="ch-title">手推车 · 配置渗透率（91款）</div>
+      <div class="ch-note">越高=越接近“标配”，缺失会扣分</div>
+      <div class="chart-wrap" style="height:520px;"><canvas id="c3_feat" width="858" height="1040" style="display: block; box-sizing: border-box; height: 520px; width: 429px;"></canvas></div>
+    </div>
+    <div>
+      <div class="finding"><strong>“标配”门槛（渗透&gt;90%）：</strong>可调节把手、固定绑带、轮子、杯架、雨伞支架、储物隔间——不做这些直接出局。</div>
+      <div class="finding"><strong>“加分项”（渗透40–85%）：</strong>记分卡夹、球钉收纳、收纳袋、保温格、手机/GPS支架——做得好可拉开体验差距。</div>
+      <div class="finding" style="margin-bottom:0;"><strong>“差异化稀缺项”（渗透&lt;25%）：</strong>手动刹车、磁性钢垫、球标——渗透低、溢价高（手动刹车 +$112），是往中高价位走的突破口。</div>
+      <p style="font-size:12px;color:var(--gray);margin-top:10px;">注：电动手推车近3个月仅 3 款在架，样本过小，配置以“电池/可调把手/杯架/手机支架”为标配，结论参考性有限。</p>
+    </div>
+  </div>
+
+  <h3 class="block-title">E. 进入建议</h3>
+  <div class="finding" style="background:var(--blue-soft);border-left-color:var(--navy);font-size:14px;">
+    <strong>建议优先做「手推车」：</strong>体量最大（占8成、约$2,042万）、需求稳定、玩家结构“一超多强”仍有缝隙、$156–242 主流价位甜蜜点清晰，靠“手动刹车/磁性钢垫”等稀缺配置差异化切入即可。
+    <strong>「电动手推车」作为第二曲线长期布局：</strong>增速最快（+6.2%）、客单高、利润空间大，但被 MGI 寡头垄断、半年无新进入者、技术与履约门槛高，需有供应链储备后再切 $1000–1500 中段。
+    <strong>「简易手推车」不建议：</strong>体量小、零增长。
+  </div>
+</section>
+
+<!-- 第四章 -->
+<section class="slide visible" id="ch4">
+  <span class="sec-tag">Chapter 04</span>
+  <h2 class="sec-title">第四章 · 竞争格局</h2>
+  <p class="sec-sub">这个市场是不是被大牌垄断、新人还有没有机会进。<strong style="color:var(--navy2);">手推车与电动手推车分别独立分析，不做取舍。</strong></p>
+
+  <div class="tag-row"><span class="src">数据来源：高尔夫推车「亚马逊」表 · 近12个月口径</span></div>
+
+  <div class="grid grid-2">
+    <!-- 手推车 -->
+    <div>
+      <h3 class="block-title" style="border-color:var(--navy);">A. 手推车 · 中度集中，仍有缝隙</h3>
+      <div class="grid grid-3" style="margin-bottom:14px;">
+        <div class="card"><div class="kpi">71.0%</div><div class="kpi-label">CR3（前3品牌销售额占比）</div></div>
+        <div class="card"><div class="kpi">86.1%</div><div class="kpi-label">CR5（前5品牌销售额占比）</div></div>
+        <div class="card"><div class="kpi">2061</div><div class="kpi-label">HHI（1500–2500 中度集中）</div></div>
+      </div>
+      <table class="data-tbl">
+        <tbody><tr><th>品牌</th><th>销售额占比</th><th>销量占比</th></tr>
+        <tr><td class="em">Caddytek</td><td>35.6%</td><td>43.2%</td></tr>
+        <tr><td>EASEGO</td><td>19.8%</td><td>16.9%</td></tr>
+        <tr><td>Bag Boy</td><td>15.6%</td><td>9.8%</td></tr>
+        <tr><td>KVV</td><td>10.2%</td><td>10.6%</td></tr>
+        <tr><td>FLAGTAG</td><td>4.9%</td><td>5.3%</td></tr>
+        <tr><td>Clicgear</td><td>4.9%</td><td>2.8%</td></tr>
+      </tbody></table>
+      <div class="finding" style="margin-top:14px;">龙头 Caddytek 一家独大（约 1/3），但前5之外仍有 22 个品牌分食约 14% 份额，<strong>属“一超多强、未完全垄断”</strong>，新进入者仍有机会。</div>
+
+      <h4 style="font-size:14px;color:var(--navy2);margin:6px 0 8px;">渠道策略（配送方式 · ASIN去重，共239）</h4>
+      <table class="data-tbl">
+        <tbody><tr><th>配送方式</th><th>FBA</th><th>AMZ自营</th><th>FBM</th><th>未标注</th></tr>
+        <tr><td>ASIN数</td><td class="em">104</td><td>51</td><td>36</td><td>48</td></tr>
+      </tbody></table>
+      <div class="finding" style="margin-top:12px;">以 <strong>FBA + 亚马逊自营为主（约 65%）</strong>，说明拼的是物流时效与 Best Seller 排名；新卖家走 FBA 是标配。</div>
+
+      <details class="fold">
+        <summary>点击展开 · 手推车新品进入情况</summary>
+        <div class="fold-body">
+          <div class="grid grid-4" style="margin-bottom:12px;">
+            <div class="card"><div class="kpi">14</div><div class="kpi-label">近6个月新上架 ASIN 数</div></div>
+            <div class="card"><div class="kpi">2.6%</div><div class="kpi-label">新品近一年销售额占比</div></div>
+            <div class="card"><div class="kpi">100%</div><div class="kpi-label">新品存活率（仍有销量）</div></div>
+            <div class="card"><div class="kpi">4.5 / 4.6</div><div class="kpi-label">新品 / 老品评分中位</div></div>
+          </div>
+          <div class="finding" style="margin:0;">头部品牌评论数中位 <strong>350</strong>，新品评论数中位仅 <strong>31</strong>，存活指数 11.3（≥0.5）。判断：<strong>有新玩家持续进场且都活了下来</strong>，但要追上头部的评论壁垒（350条）需要较长时间——<strong>能进、能活，但短期难撼动龙头</strong>。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 电动手推车 -->
+    <div>
+      <h3 class="block-title" style="border-color:var(--blue);">B. 电动手推车 · 高度垄断，门槛极高</h3>
+      <div class="grid grid-3" style="margin-bottom:14px;">
+        <div class="card"><div class="kpi">100%</div><div class="kpi-label">CR3（前3=全部）</div></div>
+        <div class="card"><div class="kpi">100%</div><div class="kpi-label">CR5</div></div>
+        <div class="card"><div class="kpi">6549</div><div class="kpi-label">HHI（&gt;2500 高度垄断）</div></div>
+      </div>
+      <table class="data-tbl">
+        <tbody><tr><th>品牌</th><th>销售额占比</th><th>销量占比</th></tr>
+        <tr><td class="em">MGI</td><td>78.6%</td><td>73.6%</td></tr>
+        <tr><td>KVV</td><td>19.1%</td><td>24.5%</td></tr>
+        <tr><td>Certified Brands</td><td>2.3%</td><td>1.9%</td></tr>
+      </tbody></table>
+      <div class="finding" style="margin-top:14px;">全品类仅 <strong>3 个品牌、10 个 ASIN</strong>，MGI 一家占近 8 成，<strong>属典型寡头垄断</strong>，价格高、玩家少。</div>
+
+      <h4 style="font-size:14px;color:var(--navy2);margin:6px 0 8px;">渠道策略（配送方式 · ASIN去重，共10）</h4>
+      <table class="data-tbl">
+        <tbody><tr><th>配送方式</th><th>FBM</th><th>FBA</th><th>AMZ自营</th><th>未标注</th></tr>
+        <tr><td>ASIN数</td><td class="em">4</td><td>2</td><td>2</td><td>2</td></tr>
+      </tbody></table>
+      <div class="finding" style="margin-top:12px;">FBM 占比偏高——电动机型<strong>体积大、单价高、运费重</strong>，卖家更倾向自发货控成本，这也意味着 <strong>履约与售后是进入门槛之一</strong>。</div>
+
+      <details class="fold">
+        <summary>点击展开 · 电动手推车新品进入情况</summary>
+        <div class="fold-body">
+          <div class="grid grid-4" style="margin-bottom:12px;">
+            <div class="card"><div class="kpi">0</div><div class="kpi-label">近6个月新上架 ASIN 数</div></div>
+            <div class="card"><div class="kpi">—</div><div class="kpi-label">新品近一年销售额占比</div></div>
+            <div class="card"><div class="kpi">—</div><div class="kpi-label">新品存活率</div></div>
+            <div class="card"><div class="kpi">4.4</div><div class="kpi-label">老品评分中位</div></div>
+          </div>
+          <div class="finding" style="margin:0;">近半年<strong>没有任何新卖家进入</strong>。说明这是一个高客单、高技术（电机/电池/遥控）、高履约门槛的封闭市场——<strong>新人想进难度极大，需有供应链与技术储备</strong>。</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="finding" style="margin-top:18px;background:#fff;border-left-color:var(--navy);">
+    <strong>竞争格局结论：</strong>手推车是<strong>“可进入”</strong>的中度集中市场——龙头强但留有缝隙、新品都能活下来，适合靠差异化切入；电动手推车是<strong>“高墙”</strong>市场——MGI 寡头垄断、半年无新进入者、客单高门槛高，更适合有供应链/技术储备的玩家长期布局。
+  </div>
+</section>
+
+<!-- 第五章 -->
+<section class="slide" id="ch5">
+  <span class="sec-tag">Chapter 05</span>
+  <h2 class="sec-title">第五章 · 价格判断</h2>
+  <p class="sec-sub">定价定在哪个区间最有机会，价格和产品结构怎么挂钩。<strong style="color:var(--navy2);">手推车与电动手推车分别独立分析，不做取舍。</strong></p>
+
+  <div class="tag-row"><span class="src">数据来源：高尔夫推车「亚马逊」表 · 价格按 K均值聚类（K=3）· 近12个月口径</span></div>
+
+  <div class="grid grid-2">
+    <!-- 手推车 -->
+    <div>
+      <h3 class="block-title" style="border-color:var(--navy);">A. 手推车 · 建议主攻 $156–242 中段</h3>
+      <div class="grid grid-3">
+        <div class="card"><div class="kpi">$30–150</div><div class="kpi-label">入门段 · 销售额占比 20%</div></div>
+        <div class="card" style="border:2px solid var(--blue);"><div class="kpi">$156–242</div><div class="kpi-label">主流段（推荐）· 占比 60%</div></div>
+        <div class="card"><div class="kpi">$249–370</div><div class="kpi-label">高端段 · 占比 20%</div></div>
+      </div>
+      <details class="fold" style="margin-top:14px;">
+        <summary>点击展开 · 手推车价格详细分析</summary>
+        <div class="fold-body">
+          <table class="data-tbl">
+            <tbody><tr><th>价格区间</th><th>ASIN数</th><th>销售额占比</th><th>销量</th><th>竞争力*</th></tr>
+            <tr><td>$30–150 入门</td><td>93</td><td>20.0%</td><td>33,150</td><td>356</td></tr>
+            <tr style="background:var(--blue-soft);"><td class="em">$156–242 主流</td><td>112</td><td class="em">59.8%</td><td>68,450</td><td class="em">611</td></tr>
+            <tr><td>$249–370 高端</td><td>34</td><td>20.2%</td><td>14,150</td><td>416</td></tr>
+          </tbody></table>
+          <p style="font-size:11.5px;color:var(--gray);margin:8px 0 14px;">*竞争力 = 区间销量 ÷ 区间ASIN数，越高表示单链接平均产出越好</p>
+          <div class="finding">主流段（$156–242）拿下约 6 成销售额、单链接产出最高（611），是<strong>需求与盈利的甜蜜点</strong>。入门段走量但竞争分散、利润薄；高端段总量小。</div>
+          <h4 style="font-size:13.5px;color:var(--navy2);margin:6px 0 6px;">价格天花板与品牌溢价</h4>
+          <p style="font-size:13px;color:var(--navy2);">最低价 $30 / 最高价 $370 / 市场均价 $176。品牌溢价：Clicgear +73%、Bag Boy +53%、EASEGO +22%，Caddytek/KVV 接近均价——<strong>高端价位被欧美老牌占据，性价比段是中国卖家主场</strong>。</p>
+          <h4 style="font-size:13.5px;color:var(--navy2);margin:14px 0 6px;">结构配置与价格的关联</h4>
+          <table class="data-tbl">
+            <tbody><tr><th>配置</th><th>带 vs 不带均价</th><th>溢价</th><th>渗透率</th></tr>
+            <tr><td class="em">手动刹车</td><td>$265 / $154</td><td class="em">+$112</td><td>20%</td></tr>
+            <tr><td>雨伞支架/底座</td><td>$184 / $120</td><td>+$64</td><td>88%</td></tr>
+            <tr><td>储物隔间</td><td>$180 / $140</td><td>+$40</td><td>89%</td></tr>
+            <tr><td>杯架</td><td>$178 / $148</td><td>+$30</td><td>92%</td></tr>
+            <tr><td>手机/GPS支架</td><td>$193 / $166</td><td>+$27</td><td>37%</td></tr>
+          </tbody></table>
+          <div class="finding" style="margin-top:12px;"><strong>“手动刹车”是最强溢价点（+$112）但渗透率仅20%</strong>——是把价格往上带的关键差异化配置。雨伞支架、储物、杯架已是“标配”（渗透&gt;85%），不做会扣分但难加价。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 电动手推车 -->
+    <div>
+      <h3 class="block-title" style="border-color:var(--blue);">B. 电动手推车 · 高客单，$1545+ 段最走货</h3>
+      <div class="grid grid-3">
+        <div class="card"><div class="kpi">$549–697</div><div class="kpi-label">低价段 · 销售额占比 2.5%</div></div>
+        <div class="card"><div class="kpi">$1007–1239</div><div class="kpi-label">中段 · 占比 21.8%</div></div>
+        <div class="card" style="border:2px solid var(--blue);"><div class="kpi">$1545–1695</div><div class="kpi-label">高端段（主销）· 占比 75.7%</div></div>
+      </div>
+      <details class="fold" style="margin-top:14px;">
+        <summary>点击展开 · 电动手推车价格详细分析</summary>
+        <div class="fold-body">
+          <table class="data-tbl">
+            <tbody><tr><th>价格区间</th><th>ASIN数</th><th>销售额占比</th><th>销量</th><th>竞争力*</th></tr>
+            <tr><td>$549–697 低价</td><td>3</td><td>2.5%</td><td>150</td><td>50</td></tr>
+            <tr><td>$1007–1239 中段</td><td>3</td><td>21.8%</td><td>750</td><td>250</td></tr>
+            <tr style="background:var(--blue-soft);"><td class="em">$1545–1695 高端</td><td>4</td><td class="em">75.7%</td><td>1,750</td><td class="em">438</td></tr>
+          </tbody></table>
+          <p style="font-size:11.5px;color:var(--gray);margin:8px 0 14px;">*竞争力 = 区间销量 ÷ 区间ASIN数</p>
+          <div class="finding">与直觉相反，<strong>越贵越好卖</strong>：$1545+ 高端段占近 8 成销售额、单链接产出最高（438）。说明买电动机型的人<strong>愿为性能/品牌付高价，低价低配反而不被信任</strong>。</div>
+          <h4 style="font-size:13.5px;color:var(--navy2);margin:6px 0 6px;">价格天花板与品牌溢价</h4>
+          <p style="font-size:13px;color:var(--navy2);">最低价 $549 / 最高价 $1695 / 中位 $1167。龙头 MGI 主打 $1500+ 高端，KVV 以更低价位切入中段——<strong>高端由 MGI 定义，价格天花板高、利润空间大</strong>。</p>
+          <div class="finding" style="margin-top:12px;">若进入电动赛道，<strong>切 $1000–1500 中段</strong>（性能接近高端、价格更友好）比硬拼低价更可行；低价段（&lt;$700）需求与信任度都最弱，不建议。</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="finding" style="margin-top:18px;background:#fff;border-left-color:var(--navy);">
+    <strong>价格判断结论：</strong>手推车主攻 <strong>$156–242 主流段</strong>（占6成销售、单链接产出最高），用“手动刹车”等差异化配置往 $200+ 走；电动手推车需求集中在 <strong>$1545+ 高端</strong>，新进入者可错位切 <strong>$1000–1500 中段</strong>，避开低价低信任区。
+  </div>
+</section>
+
+<!-- 第六章 -->
+<section class="slide" id="ch6">
+  <span class="sec-tag">Chapter 06</span>
+  <h2 class="sec-title">第六章 · 用户需求与痛点</h2>
+  <p class="sec-sub">买的人是谁、为什么买、在抱怨什么、还想要什么。<strong style="color:var(--navy2);">手推车与电动手推车分别独立分析，不做取舍。</strong></p>
+
+  <h3 class="block-title">A. 用户画像（按品类分开）</h3>
+  <div class="tag-row"><span class="src">数据来源：人群画像.xlsx · 手推车评论人主页(3,171条) / 电动手推车评论人主页(1,946条)的购买记录</span></div>
+  <div class="grid grid-2">
+    <div class="card" style="border-top:3px solid var(--navy);">
+      <h4>手推车买家：想多走路、重健康的性价比型步行球友</h4>
+      <p style="margin:8px 0 12px;color:var(--navy2);font-style:italic;border-left:3px solid var(--accent);padding-left:12px;">“以中年及银发为主、为健康而走路的休闲/进阶球友，理性消费、最看重轻便易折叠，常因背包累、护膝护腰而换手推车。”</p>
+      <p>购物记录显示：复购的非高尔夫商品里<strong>家居/数码/日用(19%)、健康养护类(约9%，护膝/支撑/按摩等)</strong>占比高；购买商品<strong>中位价仅 $26</strong>，消费理性；平均给分 4.1（不轻易打满分）。高尔夫复购集中在<strong>推车配件（杯架/手机架/雨伞架）</strong>，关注"轻量、可折叠、快开"。</p>
+    </div>
+    <div class="card" style="border-top:3px solid var(--accent);">
+      <h4>电动手推车买家：成熟、有支付力、爱科技的资深步行球友</h4>
+      <p style="margin:8px 0 12px;color:var(--navy2);font-style:italic;border-left:3px solid var(--accent);padding-left:12px;">“偏成熟、收入较高、愿为性能付费的资深球友，追求'解放双手、轻松走完18洞'，对科技与品质更敏感。”</p>
+      <p>与手推车买家相比：<strong>数码科技类商品占比近翻倍（15% vs 8%）</strong>，高尔夫配件复购更高（18% vs 15%）；高频词集中在 <strong>remote / battery / terrain / waterproof / navigator</strong>，说明更在意遥控、续航、全地形与耐用。同样有约 8% 购买健康养护类商品——核心痛点仍是"走路但别累着身体"。</p>
+    </div>
+  </div>
+
+  <h3 class="block-title">B. 使用场景与购买动机</h3>
+  <div class="finding">
+    <strong>什么情境下产生需求：</strong>想用走路打球来锻炼/控制体重、但又背不动球包，或膝盖腰背吃不消；和"开球车"的球友不同，他们想步行却不想受累。常见触发点：<strong>升级旧推车、开始想走路健身、年纪渐长扛包吃力</strong>。
+  </div>
+  <div class="grid grid-2">
+    <div class="card"><h4>手推车 · 他买的不是"一辆车"，是……</h4><p>① 一身轻松走完18洞、还能顺带锻炼的底气；② 30秒收放、塞进后备箱不占地的省心；③ 一个不弯腰就能拿到水、手机、记分卡的趁手助手。</p></div>
+    <div class="card"><h4>电动 · 他买的不是"遥控玩具"，是……</h4><p>① 彻底解放双手、专注打球的体验上限；② 上下坡都稳、电量够撑整轮的可靠；③ 一件能在球场上彰显品质的"大件装备"。</p></div>
+  </div>
+  <div class="finding" style="margin-top:14px;">社媒原声佐证：<span style="font-style:italic;">“坡道上一定要选手刹而不是脚刹，方便太多。”</span>（TikTok）·<span style="font-style:italic;">“折叠要小、没有多余零件，这点最重要。”</span>（Reddit）·<span style="font-style:italic;">“我也想开始走路打球，但球友都习惯坐车……”</span>（YouTube）——印证<strong>“轻松走路 + 易收纳 + 手刹便利”</strong>是核心动机。</div>
+
+  <h3 class="block-title">C. 差评分析（1–3星高频问题）</h3>
+  <div class="tag-row"><span class="src">数据来源：人群画像.xlsx · 产品评论表（差评 138 条）</span></div>
+  <div class="grid grid-2">
+    <div class="chart-box">
+      <div class="ch-title">差评高频主题占比</div>
+      <div class="ch-note">单条差评可涉及多个主题</div>
+      <div class="chart-wrap" style="height:260px;"><canvas id="c6_pain" width="858" height="520" style="display: block; box-sizing: border-box; height: 260px; width: 429px;"></canvas></div>
+    </div>
+    <div>
+      <div class="finding"><strong>① 前轮 / 球包兼容（50%）：</strong>前轮偏移或位置不可调，导致球包底部摩擦轮子——手推车第一大痛点。
+        <div class="quote">“即使前轮旋转到正确位置，包底也会摩擦……一些设计缺陷使它成了昂贵的车库装饰品。”（EASEGO）</div>
+        <div class="quote">“前轮偏移是最大的问题，很多包会摩擦轮子、弄乱你的包。”（EASEGO）</div>
+      </div>
+      <div class="finding"><strong>② 质量 / 断裂（39%）：</strong>塑料卡齿、手柄、绑带、锁销等小部件易坏，到货缺件。
+        <div class="quote">“锁定推车打开的塑料齿，反复开合就会折断，导致推车无法使用。”（EASEGO）</div>
+        <div class="quote">“手柄用一次就脱落。” / “寄来时少了一个轮子，质量很差。”（Caddytek）</div>
+      </div>
+      <div class="finding"><strong>③ 客服 / 售后（38%）：</strong>响应慢、配件不能单独补发，电动品类尤其突出（MGI）。
+        <div class="quote">“储物袋带撕断、包夹失灵，联系客服几乎得不到回应。”（Caddytek）</div>
+        <div class="quote">“联系卖家和厂家都无果，对在亚马逊购买失去信心。”（MGI）</div>
+      </div>
+      <div class="finding" style="margin-bottom:0;"><strong>④ 遥控 / 转向（33%，电动）：</strong>遥控迟钝、转向不顺、睡眠模式难唤醒。
+        <div class="quote">“进入睡眠模式根本弄不出来，搞不清怎么从手动切到远程。”（KVV）</div>
+        <div class="quote">“没用过5次电池就没电，只能左转，从第6洞起只能手动走。”（MGI）</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="block-title">D. 隐性需求（4–5星里"希望增加/改善"）</h3>
+  <div class="grid grid-3">
+    <div class="card"><h4>结构更省心</h4><p>储物袋加拉链/扣防掉落；前轮默认对正、免调；折叠更小更稳、无多余零件。</p>
+      <div class="quote">“唯一缺点是储物袋没有拉链或扣子，东西可能会掉出去。”（EASEGO）</div>
+      <div class="quote">“折叠要小、没有多余零件，这点最重要。”（Reddit）</div>
+    </div>
+    <div class="card"><h4>配件可单独买</h4><p>杯架/卡夹/水瓶架坏了能单独更换，而不是整机退货；卡夹要更紧、水瓶颠簸不掉。</p>
+      <div class="quote">“杯架到货就坏了，但唯一办法是整件退回，我只想要一个新杯架。”（Caddytek）</div>
+      <div class="quote">“卡牌夹太小卡牌会掉，水瓶架颠簸时夹不住水瓶。”（MGI）</div>
+    </div>
+    <div class="card"><h4>稳定与便利升级</h4><p>侧坡/湿地更稳（双前轮、强抓地）；普遍呼吁"手刹"；电动要直线跟踪准、续航更足、说明书更清楚。</p>
+      <div class="quote">“这台车需要两个前轮以更好转向，多坡赛道不推荐。”（KVV）</div>
+      <div class="quote">“坡道上一定要选手刹而不是脚刹，方便太多。”（TikTok）</div>
+    </div>
+  </div>
+
+  <h3 class="block-title">E. KANO 需求模型</h3>
+  <div class="grid grid-4">
+    <div class="card" style="border-top:3px solid #B4564A;"><h4>必备型（缺了就差评）</h4><p>前轮不刮包、部件耐用不断裂、可靠售后/可补配件、轻便可折叠、稳定不侧翻。</p></div>
+    <div class="card" style="border-top:3px solid var(--blue);"><h4>期望型（越好评价越高）</h4><p>折叠更小更快、滚动顺滑、收纳够用、电动续航与遥控顺手、客服响应快。</p></div>
+    <div class="card" style="border-top:3px solid var(--accent);"><h4>兴奋型（有了惊喜）</h4><p><strong>手刹</strong>（高呼声、低渗透）、双前轮侧坡稳、磁性钢垫/球标等贴心细节、手机无线充。</p></div>
+    <div class="card" style="border-top:3px solid var(--gray-light);"><h4>无差异型</h4><p>计分器、雨伞收纳等低关注配置——做了用户也基本无感，不必投入。</p></div>
+  </div>
+  <div class="finding" style="margin-top:16px;background:var(--paper);border-left-color:var(--navy);">
+    <strong>用户洞察结论：</strong>目标用户是"想走路、重健康但怕受累"的步行球友（电动买家更成熟、更愿付费）。<strong>必备项是"前轮不刮包 + 部件耐用 + 售后可补件"</strong>——这正是当前竞品差评最集中处；<strong>"手刹"是呼声高、渗透低的兴奋型机会点</strong>，与第五章"手动刹车 +$112 溢价"相互印证，是差异化突破口。
+  </div>
+</section>
+
+<!-- 第七章 -->
+<section class="slide" id="ch7">
+  <span class="sec-tag">Chapter 07</span>
+  <h2 class="sec-title">第七章 · 竞品分析</h2>
+  <p class="sec-sub">主要对手长什么样、强在哪、弱在哪。聚焦 4 个标杆竞品：手推车 EASEGO、Caddytek；电动手推车 MGI、KVV。</p>
+  <div class="tag-row"><span class="src">数据来源：高尔夫推车「竞品分析」表 ·「竞争品牌产品线」表</span></div>
+
+  <h3 class="block-title">A. 竞品对比（4 款标杆机型）</h3>
+  <div class="grid grid-4">
+    <div class="card" style="text-align:center;"><img src="./高尔夫手推车市场深度调研报告_files/41yo6Ok0cPL._AC_US600_.jpg" style="height:120px;object-fit:contain;margin-bottom:8px;"><h4>EASEGO · 手推车</h4><p style="font-size:11.5px;">三轮 · 全地形 · 防侧翻</p></div>
+    <div class="card" style="text-align:center;"><img src="./高尔夫手推车市场深度调研报告_files/413gdnEOAGL._AC_US600_.jpg" style="height:120px;object-fit:contain;margin-bottom:8px;"><h4>Caddytek · 手推车</h4><p style="font-size:11.5px;">三轮 · 一键折叠 · 万向轮</p></div>
+    <div class="card" style="text-align:center;"><img src="./高尔夫手推车市场深度调研报告_files/61Zrw0v+HML._AC_US600_.jpg" style="height:120px;object-fit:contain;margin-bottom:8px;"><h4>MGI · 电动</h4><p style="font-size:11.5px;">四轮 · 遥控调速 · 屏显</p></div>
+    <div class="card" style="text-align:center;"><img src="./高尔夫手推车市场深度调研报告_files/615Z4lqnKCL._AC_US600_.jpg" style="height:120px;object-fit:contain;margin-bottom:8px;"><h4>KVV · 电动</h4><p style="font-size:11.5px;">三轮+辅助轮 · 1-9档遥控</p></div>
+  </div>
+
+  <div style="overflow-x:auto;margin-top:14px;">
+    <table class="data-tbl">
+      <tbody><tr><th style="min-width:120px;">维度 \ 竞品</th><th>EASEGO<br><span style="font-weight:400;font-size:11px;">手推</span></th><th>Caddytek<br><span style="font-weight:400;font-size:11px;">手推</span></th><th>MGI<br><span style="font-weight:400;font-size:11px;">电动</span></th><th>KVV<br><span style="font-weight:400;font-size:11px;">电动</span></th></tr>
+      <tr><td>日常价格</td><td>$169–239</td><td>$149–209</td><td>$1395–1695</td><td>$1007–1119</td></tr>
+      <tr><td>活动价</td><td>$149–169</td><td>$135–160</td><td>$1250–1455</td><td>$895–1063</td></tr>
+      <tr><td>促销力度</td><td class="em">25–37%</td><td>10–30%</td><td>10–25%</td><td>10–20%</td></tr>
+      <tr><td>配送方式</td><td>FBA</td><td>AMZ自营</td><td>FBM+AMZ</td><td>FBA</td></tr>
+      <tr><td>月销量(估)</td><td class="em">~1033</td><td>~467</td><td>~100</td><td>~50</td></tr>
+      <tr><td>月销售额(估)</td><td class="em">$216K</td><td>$85K</td><td>$168K</td><td>$85K</td></tr>
+      <tr><td>上架时间</td><td>2024-11</td><td>2021-12</td><td>2024-02</td><td>2024-11</td></tr>
+      <tr style="background:#EEF2F7;"><td class="em">轮子</td><td>三轮</td><td>三轮</td><td>四轮</td><td>三轮+2辅助轮</td></tr>
+      <tr><td>前轮(360°旋转)</td><td class="no">—</td><td class="yes">✓</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td>电池</td><td class="no">—</td><td class="no">—</td><td>36洞</td><td>18洞</td></tr>
+      <tr><td>可调节把手</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td>固定绑带</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td>记分卡夹</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td>球钉收纳</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td>饮料架</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td>储物隔间</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td>雨伞支架/底座</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td>网/布状收纳袋</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td></tr>
+      <tr><td>球座</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td>储物袋</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td></tr>
+      <tr><td>保温格</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td>手刹</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+      <tr><td>手机/GPS架</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td>雨伞收纳</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+      <tr><td>磁性钢垫</td><td class="no">—</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td></tr>
+      <tr><td>球标(Ball Marker)</td><td class="no">—</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td></tr>
+      <tr><td>计分器</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+    </tbody></table>
+  </div>
+  <div class="finding" style="margin-top:12px;">配置上 <strong>手推车（EASEGO/Caddytek）功能最全</strong>，电动车为减重/降本牺牲了部分收纳；Caddytek 独有“磁性钢垫+球标”细节，KVV 独有“球座收纳”。四款<strong>都没有“手刹”和“计分器”</strong>——正是第五章指出的高溢价、低渗透的差异化空白点。</div>
+
+  <h3 class="block-title">B. 评论口碑对比（差评 / 好评 / 隐性需求）</h3>
+  <div class="tag-row"><span class="src">数据来源：高尔夫推车评论.xlsx（按 ASIN 对应竞品）· 共 712 条评论</span></div>
+  <div class="grid grid-2">
+
+    <div class="rev-card">
+      <div class="rh">EASEGO（手推）· 差评率 22%</div>
+      <div class="rmeta">280 条评论 · 5星199 / 1星35</div>
+      <div class="rev-blk"><span class="lbl neg">差评高频</span>
+        <div class="pt">① 前轮偏移设计缺陷，球包底部摩擦轮子；② 展开困难、塑料卡齿/绑带易断。</div>
+        <div class="quote">“即使前轮旋转到正确位置，包底也会摩擦……一些设计缺陷使它成了昂贵的车库装饰品。”</div>
+        <div class="quote">“锁定推车打开的塑料齿，反复开合就会折断，导致推车无法使用。”</div>
+      </div>
+      <div class="rev-blk"><span class="lbl pos">好评高频</span>
+        <div class="pt">① 配置齐全（手机/饮料/冷却/雨伞架）；② 超轻、40–50秒快速展开、脚刹好用、性价比高。</div>
+        <div class="quote">“工程师非常聪明，你需要的它都有……超轻，40-50秒就能展开就绪。”</div>
+        <div class="quote">“脚踏制动稳固可靠，最陡的坡也能牢牢抓握。”</div>
+      </div>
+      <div class="rev-blk" style="margin-bottom:0;"><span class="lbl hid">隐性需求</span>
+        <div class="pt">储物袋希望有拉链/扣子防掉落；前轮位置希望默认正确或免调。</div>
+        <div class="quote">“唯一缺点是储物袋没有拉链或扣子，东西可能会掉出去。”</div>
+        <div class="quote">“默认前轮在左侧，杆子很不稳会刮包，打了几轮损坏包后才弄明白要转方向。”</div>
+      </div>
+    </div>
+
+    <div class="rev-card">
+      <div class="rh">Caddytek（手推）· 差评率 11%（最低）</div>
+      <div class="rmeta">203 条评论 · 5星160 / 1星9</div>
+      <div class="rev-blk"><span class="lbl neg">差评高频</span>
+        <div class="pt">① 配件/部件质量（杯架、手柄、锁销缺失或损坏）；② 客服响应慢；③ 湿草卡前轮。</div>
+        <div class="quote">“储物袋带撕断、包夹失灵、手柄只能锁一个位置……联系客服几乎得不到回应。”</div>
+        <div class="quote">“湿草屑会卡在前框架和轮子之间，导致推车无法使用。”</div>
+      </div>
+      <div class="rev-blk"><span class="lbl pos">好评高频</span>
+        <div class="pt">① 一键折叠、旋转前轮、滚动平直可对齐；② 性价比突出（对比 $250–300 同类不输）。</div>
+        <div class="quote">“一键安装、轻松折叠、旋转前轮……物超所值，实体店同类起价就 $200。”</div>
+        <div class="quote">“轮子用密封滚珠轴承，推起来非常轻松；和 $250–300 的推车比毫不逊色。”</div>
+      </div>
+      <div class="rev-blk" style="margin-bottom:0;"><span class="lbl hid">隐性需求</span>
+        <div class="pt">配件希望能单独购买/更换，不必整机退货；前轮排泥设计。</div>
+        <div class="quote">“杯架到货就坏了，但唯一办法是整件退回，我只想要一个新杯架。”</div>
+      </div>
+    </div>
+
+    <div class="rev-card">
+      <div class="rh">MGI（电动）· 差评率 31%（最高）</div>
+      <div class="rmeta">138 条评论 · 5星77 / 1星24</div>
+      <div class="rev-blk"><span class="lbl neg">差评高频</span>
+        <div class="pt">① 电池/电机故障（用几次就停、没电、只能左转）；② 客服售后极差；③ 到货缺陷/疑似翻新；④ 跟踪偏左。</div>
+        <div class="quote">“第二次使用就停止运转……联系卖家和厂家都无果，对在亚马逊购买失去信心。”</div>
+        <div class="quote">“没用过5次电池就没电，只能左转，从第6洞起只能手动走。”</div>
+      </div>
+      <div class="rev-blk"><span class="lbl pos">好评高频</span>
+        <div class="pt">① 30秒安装、遥控灵敏；② 电池续航强（丘陵18洞后仍剩70–80%）、上下坡稳，让人重新能走完18洞。</div>
+        <div class="quote">“30秒装好，遥控反应灵敏……让走路变得非常轻松。”</div>
+        <div class="quote">“走完丘陵18洞电池还剩70–80%，非常可靠。”</div>
+      </div>
+      <div class="rev-blk" style="margin-bottom:0;"><span class="lbl hid">隐性需求</span>
+        <div class="pt">直线跟踪需校准；配件（卡夹/水瓶架）固定要更牢；兼容更多球包。</div>
+        <div class="quote">“我的会向左跟踪需要常规修正，停在山上还会逐渐下坡。”</div>
+        <div class="quote">“卡牌夹太小卡牌会掉，水瓶架颠簸时夹不住水瓶。”</div>
+      </div>
+    </div>
+
+    <div class="rev-card">
+      <div class="rh">KVV（电动）· 差评率 13%</div>
+      <div class="rmeta">91 条评论 · 5星72 / 1星3</div>
+      <div class="rev-blk"><span class="lbl neg">差评高频</span>
+        <div class="pt">① 遥控/转向问题（反应迟钝、延迟、睡眠模式难唤醒、单轮停转转向不顺）；② 湿坡抓地差；③ 说明书英文不地道。</div>
+        <div class="quote">“进入睡眠模式根本弄不出来，搞不清怎么从手动切到远程，说明书让我发邮件等24小时。”</div>
+        <div class="quote">“转弯靠完全停一个轮、旋转另一个轮，不平滑也更难控制，希望改成更高级的设计。”</div>
+      </div>
+      <div class="rev-blk"><span class="lbl pos">好评高频</span>
+        <div class="pt">① 做工结实、360°前轮可锁；② 附高品质配件+收纳包、性价比高、客服回复快、有备用电池。</div>
+        <div class="quote">“做工扎实，360°旋转前轮可锁，平坦窄洞灵活、坡道锁死更稳。”</div>
+        <div class="quote">“性价比极佳，比其他卡带更易操作、更轻、平衡更好，还附高品质配件和收纳包。”</div>
+      </div>
+      <div class="rev-blk" style="margin-bottom:0;"><span class="lbl hid">隐性需求</span>
+        <div class="pt">双前轮提升侧坡转向；轮子抓地力；更友好的英文说明与上手引导。</div>
+        <div class="quote">“这台车需要两个前轮以更好转向，多坡赛道不推荐。”</div>
+        <div class="quote">“轮子可以有更好的抓地力。”</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="finding" style="margin-top:16px;background:#fff;border-left-color:var(--navy);">
+    <strong>口碑横向结论：</strong>手推车的差评集中在<strong>“前轮/球包兼容、折叠机构与塑料件耐用性、配件质量与客服”</strong>；电动车差评集中在<strong>“电池/电机可靠性、遥控与转向手感、售后”</strong>。共同的隐性需求是：<strong>配件可单独更换、直线/侧坡稳定性、更友好的英文说明</strong>——这些都是新进入者可直接对标改进的发力点。
+  </div>
+
+  <h3 class="block-title">C. 品牌深度分析</h3>
+  <div class="grid grid-2">
+    <div class="card"><h4>Caddytek · 美国老牌（2013 起）</h4><p>专注高尔夫推车，36 个 SKU 中 25 个是三轮推车，产品线聚焦、产地美国。打法是<strong>“品类专家 + 品牌信任”</strong>，AMZ 自营、靠口碑与细节配置（磁性钢垫、球标）站稳中端，是手推车的“标准答案”。</p>
+      <p style="font-size:12px;color:var(--navy2);margin-top:8px;border-top:1px dashed var(--line);padding-top:8px;"><strong>站外社媒：中等。</strong>有独立站 caddytek.com、Facebook 与 Instagram（@caddytekinc），无明显 YouTube 频道；主要靠零售分销 + 用户口碑，社媒以产品种草为主、声量稳定但不算大。</p></div>
+    <div class="card"><h4>EASEGO · 中国新锐（2024 起）</h4><p>纯中国产地、仅 10 个 SKU，全部集中在三/四轮推车。<strong>“单点突破 + 大促冲量”</strong>——上架不到一年靠 25–37% 折扣做到手推车最高月销量，但产品线单薄、品牌沉淀弱，护城河不深。</p>
+      <p style="font-size:12px;color:var(--navy2);margin-top:8px;border-top:1px dashed var(--line);padding-top:8px;"><strong>站外社媒：几乎为零。</strong>纯亚马逊“工厂直营店”模式，未见独立站与 Instagram/TikTok 账号，仅有 Amazon Live 站内直播——<strong>完全依赖站内流量，站外是其最大短板</strong>。</p></div>
+    <div class="card"><h4>MGI · 电动专家（2018 起）</h4><p>电动赛道龙头，47 个 SKU 重心在电池/遥控/GPS 等电动生态配件，产地美国。<strong>“技术 + 生态 + 高价”</strong>，用电池续航（36洞）和屏显遥控建立技术壁垒，价格天花板由它定义。</p>
+      <p style="font-size:12px;color:var(--navy2);margin-top:8px;border-top:1px dashed var(--line);padding-top:8px;"><strong>站外社媒：最强。</strong>澳洲品牌（创立 1993），独立站 us.mgigolf.com，Instagram 主账号 @mgigolf 约 1.8 万粉 + 北美账号 @mgigolfnorthamerica 约 3.5 千粉，YouTube 产品视频齐全，并被 Today's Golfer 等媒体多次评测——<strong>站外品牌资产是其高溢价的支撑</strong>。</p></div>
+    <div class="card"><h4>KVV · 中国全品类跨境（2020 起）</h4><p>93 个 SKU、HK/CN 产地，横跨球包、童杆、推车、电动车、配件——<strong>“全品类铺货 + 站内运营”</strong>，多个 ASIN 拿 Amazon's Choice、A+/视频/SP广告齐全。手推与电动两头都布局，是最直接的中国对标对象。</p>
+      <p style="font-size:12px;color:var(--navy2);margin-top:8px;border-top:1px dashed var(--line);padding-top:8px;"><strong>站外社媒：弱。</strong>有独立站 kvvsports.com（含客服/退换政策），但站外社媒声量低，主力仍是亚马逊多店铺站内运营——<strong>有独立站雏形但品牌内容运营不足</strong>。</p></div>
+  </div>
+  <p style="font-size:12px;color:var(--gray);margin-top:10px;">说明：站外社媒数据来自公开网络检索（独立站 / Instagram / YouTube / 媒体评测），粉丝量为检索时近似值；营销标识（A+、视频、SP广告、Amazon's Choice）来自亚马逊运营数据。</p>
+
+  <h3 class="block-title">D. SWOT 矩阵（站在“中国卖家进入手推车”视角）</h3>
+  <div class="grid grid-2">
+    <div class="card" style="background:var(--blue-soft);border-top:4px solid var(--navy);"><h4>优势 Strengths</h4><p>供应链/成本优势明显（KVV、EASEGO 已验证）；可快速堆配置、灵活定价；亚马逊运营打法成熟（A+/视频/SP广告）。</p></div>
+    <div class="card" style="background:var(--blue-soft);border-top:4px solid var(--blue);"><h4>劣势 Weaknesses</h4><p>品牌沉淀弱、评论壁垒高（头部约350条）；缺少 Caddytek/Clicgear 级别的口碑与万向轮等专利细节；站外品牌声量低。</p></div>
+    <div class="card" style="background:var(--blue-soft);border-top:4px solid var(--navy);"><h4>机会 Opportunities</h4><p>“手动刹车”等高溢价配置渗透率仅20%；中端 $156–242 甜蜜点仍有缝隙；电动化趋势带来配件/电动入门机会。</p></div>
+    <div class="card" style="background:var(--blue-soft);border-top:4px solid var(--blue);"><h4>威胁 Threats</h4><p>EASEGO 式价格战压缩利润；Caddytek 品牌护城河；电动赛道被 MGI 寡头垄断；旺季备货与大件物流成本压力。</p></div>
+  </div>
+</section>
+
+<!-- 第八章 -->
+<section class="slide" id="ch8">
+  <span class="sec-tag">Chapter 08</span>
+  <h2 class="sec-title">第八章 · 结论</h2>
+  <p class="sec-sub">一页看懂：做什么、给谁做、凭什么赢。<strong style="color:var(--navy2);">手推车与电动手推车分别独立给出结论，不做取舍。</strong></p>
+
+  <h3 class="block-title">A. 核心机会点（用户强烈需要、竞品没满足好）</h3>
+  <div class="grid grid-3">
+    <div class="card" style="border-top:3px solid var(--accent);"><h4>① 手刹（最大缺口）</h4><p>用户高呼"坡道要手刹不要脚刹"，但四大竞品全部没有、全市场渗透仅 20%，且带来 +$112 溢价——<strong>需求强、供给空、还能加价</strong>。</p></div>
+    <div class="card" style="border-top:3px solid var(--accent);"><h4>② 前轮不刮包</h4><p>50% 的差评在抱怨前轮偏移摩擦球包，连销量第一的 EASEGO 也栽在这——<strong>把"任何球包都不刮"做扎实就能直接抢口碑</strong>。</p></div>
+    <div class="card" style="border-top:3px solid var(--accent);"><h4>③ 配件可单独补 + 好售后</h4><p>38% 差评因"小件坏了只能整机退、客服慢"。<strong>提供单独配件补发 + 快速响应</strong>，是低成本高口碑的护城河。</p></div>
+  </div>
+
+  <h3 class="block-title">B. 目标用户画像（一句话）</h3>
+  <div class="grid grid-2">
+    <div class="finding" style="margin:0;"><strong>手推车：</strong>以中年及银发为主、"想走路健身又怕累着身体"的性价比型步行球友，最看重轻便、易折叠、不刮包。</div>
+    <div class="finding" style="margin:0;"><strong>电动手推车：</strong>成熟、有支付力、爱科技的资深步行球友，愿为遥控顺手、续航足、全地形稳定付高价。</div>
+  </div>
+
+  <h3 class="block-title">C. 核心用户痛点 &amp; 多角度解决建议</h3>
+  <table class="data-tbl">
+    <tbody><tr><th>核心痛点</th><th>解决建议（不限类目的通用思路）</th></tr>
+    <tr><td class="em">前轮刮包、转向不顺</td><td>产品端：前轮默认对正 + 可微调 + 防刮护套；电动加双前轮提升侧坡转向。体验端：附 30 秒"前轮校准"图示卡，降低上手门槛。</td></tr>
+    <tr><td class="em">小部件易坏、到货缺件</td><td>供应链端：卡齿/锁销等关键件改金属；出厂全检。服务端：上线"配件单独购买/免费补发"页面，把退货变补件。</td></tr>
+    <tr><td class="em">坡道刹车不便</td><td>产品端：标配/选配手刹（兴奋型卖点）。营销端：主图与视频直接演示"坡道单手刹停"，对标竞品空白。</td></tr>
+    <tr><td class="em">售后响应慢（尤其电动）</td><td>运营端：24h 内响应承诺 + 本地化英文客服与说明书；用 A+/视频做"自助排障"内容，降客诉。</td></tr>
+    <tr><td class="em">电动：电池/电机可靠性</td><td>产品端：电池冗余设计 + 续航标注更保守可信；质保延长。信任端：用真实"丘陵18洞剩余电量"实测内容打消顾虑。</td></tr>
+  </tbody></table>
+
+  <details class="fold" style="margin-top:16px;">
+    <summary>专题展开 · 前轮"零刮包"结构解决方案（针对第一大痛点）</summary>
+    <div class="fold-body">
+      <div class="finding" style="margin-top:0;">关键思路：<strong>别在球包上贴防护套</strong>（运动的是轮子，贴哪磨哪、护套自身也会被磨穿），而要从结构上让<strong>前轮的运动包络根本够不到包的下托</strong>。</div>
+
+      <div class="chart-box" style="margin-bottom:16px;">
+        <div class="ch-title">产品结构示意 · 前轮"零刮包"设计（三轮手推车侧视）</div>
+        <div class="ch-note">绿色=安全间隙｜金色=车架固定挡板与抬高后移的下托｜蓝色=前移的前轮</div>
+        <svg viewBox="0 0 760 440" style="width:100%;height:auto;font-family:var(--sans);">
+          <defs>
+            <marker id="arrA" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto"><path d="M1,1 L8,4.5 L1,8" fill="none" stroke="#3F7D5A" stroke-width="1.6"></path></marker>
+            <marker id="arrB" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto-start-reverse"><path d="M8,1 L1,4.5 L8,8" fill="none" stroke="#3F7D5A" stroke-width="1.6"></path></marker>
+            <pattern id="hatch" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="7" stroke="#9a6f33" stroke-width="2.4"></line></pattern>
+          </defs>
+
+          <!-- 地面 -->
+          <line x1="40" y1="372" x2="715" y2="372" stroke="#0A2540" stroke-width="2" opacity=".4"></line>
+          <g stroke="#0A2540" stroke-width="1.4" opacity=".22">
+            <line x1="70" y1="372" x2="58" y2="386"></line><line x1="130" y1="372" x2="118" y2="386"></line><line x1="190" y1="372" x2="178" y2="386"></line><line x1="250" y1="372" x2="238" y2="386"></line><line x1="430" y1="372" x2="418" y2="386"></line><line x1="520" y1="372" x2="508" y2="386"></line><line x1="610" y1="372" x2="598" y2="386"></line><line x1="670" y1="372" x2="658" y2="386"></line>
+          </g>
+
+          <!-- 车架 -->
+          <line x1="575" y1="338" x2="438" y2="98" stroke="#0A2540" stroke-width="6" stroke-linecap="round"></line>
+          <line x1="438" y1="98" x2="360" y2="84" stroke="#0A2540" stroke-width="6" stroke-linecap="round"></line>
+          <line x1="560" y1="334" x2="175" y2="344" stroke="#0A2540" stroke-width="6" stroke-linecap="round"></line>
+          <line x1="486" y1="214" x2="455" y2="336" stroke="#0A2540" stroke-width="5" stroke-linecap="round"></line>
+
+          <!-- 后轮(两只) -->
+          <circle cx="602" cy="334" r="33" fill="#FBFAF6" stroke="#0A2540" stroke-width="2.2" opacity=".55"></circle>
+          <circle cx="575" cy="338" r="36" fill="#FBFAF6" stroke="#0A2540" stroke-width="2.6"></circle>
+          <circle cx="575" cy="338" r="9" fill="#0A2540"></circle>
+
+          <!-- 球包 -->
+          <path d="M300,312 L348,302 L420,156 Q424,144 412,142 L372,150 Q360,152 356,164 L292,300 Q288,310 300,312 Z" fill="#E7ECF2" stroke="#0A2540" stroke-width="2.4"></path>
+          <g stroke="#0A2540" stroke-width="2" stroke-linecap="round" opacity=".8">
+            <line x1="378" y1="150" x2="402" y2="92"></line><line x1="392" y1="148" x2="420" y2="96"></line><line x1="365" y1="152" x2="384" y2="98"></line>
+          </g>
+          <circle cx="402" cy="92" r="5" fill="#0A2540" opacity=".8"></circle><circle cx="420" cy="96" r="5" fill="#0A2540" opacity=".8"></circle><circle cx="384" cy="98" r="5" fill="#0A2540" opacity=".8"></circle>
+          <text x="350" y="235" font-size="13" fill="#21456C" font-weight="700" transform="rotate(-20 350 235)">球包</text>
+
+          <!-- 下托(抬高后移) ② -->
+          <path d="M286,300 L286,328 L352,328 L352,308" fill="none" stroke="#B5894B" stroke-width="5" stroke-linecap="round"></path>
+          <line x1="286" y1="300" x2="276" y2="292" stroke="#B5894B" stroke-width="5" stroke-linecap="round"></line>
+
+          <!-- 车架固定挡板 ③ -->
+          <path d="M228,256 Q244,300 246,346 L262,346 Q260,298 246,254 Z" fill="url(#hatch)" stroke="#B5894B" stroke-width="2.4"></path>
+          <line x1="246" y1="300" x2="300" y2="300" stroke="#B5894B" stroke-width="2" stroke-dasharray="3 3" opacity=".7"></line>
+
+          <!-- 前轮(前移) ① -->
+          <circle cx="168" cy="344" r="27" fill="#DCE4EE" stroke="#5B7DA6" stroke-width="2.8"></circle>
+          <circle cx="168" cy="344" r="8" fill="#5B7DA6"></circle>
+
+          <!-- 安全间隙 -->
+          <line x1="197" y1="352" x2="283" y2="352" stroke="#3F7D5A" stroke-width="2" marker-start="url(#arrB)" marker-end="url(#arrA)"></line>
+          <rect x="186" y="356" width="108" height="20" rx="3" fill="#E1EDE5"></rect>
+          <text x="240" y="370" font-size="11.5" fill="#356B4F" font-weight="700" text-anchor="middle">安全间隙·轮子够不到包</text>
+
+          <!-- 编号标注 -->
+          <g font-size="12.5" fill="#21456C">
+            <line x1="168" y1="375" x2="120" y2="412" stroke="#5B7DA6" stroke-width="1.4"></line>
+            <circle cx="112" cy="418" r="11" fill="#5B7DA6"></circle><text x="112" y="422" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">1</text>
+            <text x="128" y="422" font-weight="600">前轮前移（加长前叉 / 前倾角）</text>
+
+            <line x1="320" y1="328" x2="470" y2="404" stroke="#B5894B" stroke-width="1.4"></line>
+            <circle cx="478" cy="408" r="11" fill="#B5894B"></circle><text x="478" y="412" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">2</text>
+            <text x="494" y="412" font-weight="600">下托抬高后移</text>
+
+            <line x1="245" y1="256" x2="300" y2="120" stroke="#B5894B" stroke-width="1.4"></line>
+            <circle cx="300" cy="112" r="11" fill="#B5894B"></circle><text x="300" y="116" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">3</text>
+            <text x="316" y="116" font-weight="600">车架固定挡板（独立、可单独更换）</text>
+          </g>
+        </svg>
+      </div>
+
+      <table class="data-tbl">
+        <tbody><tr><th>方案</th><th>做法</th><th>效果 / 说明</th></tr>
+        <tr><td class="em">① 改几何（最根本）</td><td>加大前轮前伸量与前倾角（rake），让前轮接地点与摆动包络落在包下托前方。</td><td>轮子再转也扫不到包底；成本低、最有效，是 Clicgear/Bag Boy 的口碑关键。</td></tr>
+        <tr><td class="em">② 抬高+后移下托</td><td>托包底座做得更高、更靠后，前缘加上翘挡边。</td><td>制造垂直+水平双重间隙，包始终架在轮子上方而非贴着。</td></tr>
+        <tr><td class="em">③ 车架固定式挡板</td><td>前轮与包之间装一块刚性塑料护板，<strong>固定在车架上（非贴在包上）</strong>。</td><td>蹭到的是护板不是包；护板独立、可单独更换——同时解决"护套被磨"问题。</td></tr>
+        <tr><td>④ 限制转向角/转向锁</td><td>机械限位或可锁定万向轮（直行锁死、需要时放开）。</td><td>急转弯是刮包高发场景，限制摆角即可规避。</td></tr>
+        <tr><td>⑤ 悬臂/Z形车架</td><td>包重心架在后轴上方偏后，前轮完全独立在前。</td><td>从布局上彻底分离轮区与包区。</td></tr>
+      </tbody></table>
+      <div class="finding" style="margin-bottom:0;"><strong>推荐组合：方案①（前轮前移几何）+ 方案③（车架固定挡板）</strong>——既治本，又能形成一个看得见、可宣传的"零刮包"卖点，正面打中差评 TOP1（占 50% 差评）。</div>
+    </div>
+  </details>
+
+  <h3 class="block-title">D. 产品核心价值主张（一句话）</h3>
+  <div class="grid grid-2">
+    <div class="card" style="border-top:3px solid var(--navy);"><h4>手推车</h4><p style="font-size:14px;color:var(--navy2);">这是一款为<strong>"想走路健身、怕累着身体"的步行球友</strong>，解决<strong>"前轮刮包、刹车不便、小件易坏"</strong>，提供<strong>"任何球包都不刮、坡道单手刹停、配件随时补"</strong>的<strong>轻量易折叠高尔夫手推车</strong>。</p></div>
+    <div class="card" style="border-top:3px solid var(--accent);"><h4>电动手推车</h4><p style="font-size:14px;color:var(--navy2);">这是一款为<strong>"愿为体验付费的资深步行球友"</strong>，解决<strong>"遥控迟钝、侧坡不稳、续航与售后焦虑"</strong>，提供<strong>"遥控顺手、全地形稳、续航可信、售后无忧"</strong>的<strong>遥控电动高尔夫手推车</strong>。</p></div>
+  </div>
+
+  <h3 class="block-title">E. 产品差异化方向 &amp; 建议</h3>
+  <div class="grid grid-3">
+    <div class="card"><h4>配置差异化</h4><p>把竞品全缺的<strong>手刹</strong>做成招牌卖点；前轮"零刮包"结构；金属关键件提升耐用——直击差评 TOP3。</p></div>
+    <div class="card"><h4>服务差异化</h4><p><strong>配件可单独买 + 24h 客服 + 地道英文说明</strong>，把 EASEGO/KVV 的售后短板变成自己的口碑壁垒。</p></div>
+    <div class="card"><h4>内容/品牌差异化</h4><p>两个中国对标品牌站外几乎为零——<strong>布局 YouTube 评测/TikTok 场景短视频 + 独立站</strong>，抢站外心智，降低对站内流量的依赖。</p></div>
+  </div>
+
+  <h3 class="block-title">F. 价格定位</h3>
+  <div class="grid grid-2">
+    <div class="card" style="border-top:3px solid var(--navy);"><h4>手推车：主攻 $156–242</h4><p>这是占 60% 销售额、单链接产出最高的甜蜜点。建议<strong>切入 $169–219</strong>：高于纯低价混战、靠手刹/不刮包等差异化把价格站上 $200+，避开 Clicgear/Bag Boy 的 $250+ 高端区。</p></div>
+    <div class="card" style="border-top:3px solid var(--accent);"><h4>电动：错位切 $1000–1500</h4><p>需求集中在 $1545+ 高端（MGI 主导）。新进入者宜以<strong>$1000–1500 中段</strong>切入——性能接近高端、价格更友好，避开 &lt;$700 低信任低需求区。</p></div>
+  </div>
+
+  <div class="finding" style="margin-top:18px;background:var(--navy);border-left-color:var(--accent);color:#fff;">
+    <strong style="color:#fff;">一句话总结：</strong>优先做<strong style="color:var(--accent);">手推车</strong>、定价 $169–219，用<strong style="color:var(--accent);">"手刹 + 前轮零刮包 + 配件可补 + 站外内容"</strong>四件事正面打竞品差评最痛处；<strong style="color:var(--accent);">电动手推车</strong>作为第二曲线，待供应链就绪后以 $1000–1500 错位切入。
+  </div>
+</section>
+
+</main>
+
+<script>
+  // 启用入场动画（脚本未运行 / 旧浏览器时内容默认可见，保证 GitHub Pages 等环境正常显示）
+  if('IntersectionObserver' in window){document.documentElement.classList.add('js');}
+
+  // 滚动高亮当前章节
+  const links=[...document.querySelectorAll('nav.sidebar a')];
+
+  // 导航点击：按 ID 滚动，避免 href 在本地/子路径下解析异常导致"点不动"
+  links.forEach(a=>a.addEventListener('click',e=>{
+    const id=a.getAttribute('href').slice(1);
+    const t=document.getElementById(id);
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});history.replaceState(null,'','#'+id);}
+  }));
+  const map={};links.forEach(a=>map[a.getAttribute('href').slice(1)]=a);
+  const obs=new IntersectionObserver(es=>{
+    es.forEach(e=>{
+      if(e.isIntersecting){
+        links.forEach(l=>l.classList.remove('active'));
+        if(map[e.target.id])map[e.target.id].classList.add('active');
+      }
+    });
+  },{rootMargin:'-45% 0px -45% 0px'});
+  document.querySelectorAll('section.slide').forEach(s=>obs.observe(s));
+
+  // 入场动画
+  const revObs=new IntersectionObserver(es=>{
+    es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target);}});
+  },{rootMargin:'0px 0px -12% 0px',threshold:.08});
+  document.querySelectorAll('section.slide').forEach(s=>revObs.observe(s));
+  // 首屏立即显示
+  document.querySelector('section.cover')?.classList.add('visible');
+
+  // 阅读进度条
+  const prog=document.getElementById('progress');
+  window.addEventListener('scroll',()=>{
+    const h=document.documentElement.scrollHeight-window.innerHeight;
+    prog.style.width=(window.scrollY/h*100)+'%';
+  },{passive:true});
+
+  // ============ 第一章 图表 ============
+  const NAVY='#0A2540',BLUE='#5B7DA6',SOFT='#9DB2C9',LT='#C5D1E0',GREEN='#3F7D5A',RED='#B4564A';
+  Chart.defaults.font.family="'Manrope','Noto Sans SC','PingFang SC',sans-serif";
+  Chart.defaults.font.size=11;Chart.defaults.color='#6B7280';
+  const labels24=['24-05','24-06','24-07','24-08','24-09','24-10','24-11','24-12','25-01','25-02','25-03','25-04','25-05','25-06','25-07','25-08','25-09','25-10','25-11','25-12','26-01','26-02','26-03','26-04'];
+  const rev24=[2830725,2950104,2627242,1615211,1174263,1322726,2096878,2866135,739439,1054780,1915234,2944377,3103288,3028025,2695370,1882894,1268445,990393,2481747,2852437,1168504,1035545,1675541,2654964];
+  const qty24=[15500,17550,14850,9100,7250,7700,8700,15150,4150,5850,12300,16200,16050,16700,14300,10650,6600,4700,10550,15350,6200,5400,8600,13350];
+  const price24=[215.8,208.2,183.5,181.3,183.5,195.2,195.9,181.9,208.0,191.3,180.3,207.6,216.7,208.1,219.3,219.8,200.1,215.3,234.8,235.5,209.7,241.2,206.5,225.0];
+  const priceYoY=price24.map((p,i)=> i<12?null:+(((p/price24[i-12])-1)*100).toFixed(1));
+
+  new Chart(c1_struct,{type:'doughnut',data:{labels:['人力手推车 54%','电动推车 46%'],datasets:[{data:[54,46],backgroundColor:[NAVY,BLUE]}]},options:{maintainAspectRatio:false,layout:{padding:6},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>c.label.replace(/ \d+%/,'')+': '+c.raw+'%'}}},cutout:'58%'}});
+  new Chart(c1_plat,{type:'doughnut',data:{labels:['Amazon 55%','品牌独立站 22%','垂直高尔夫零售 13%','Walmart等 10%'],datasets:[{data:[55,22,13,10],backgroundColor:[NAVY,BLUE,SOFT,LT]}]},options:{maintainAspectRatio:false,layout:{padding:6},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>c.label.replace(/ \d+%/,'')+': '+c.raw+'%'}}},cutout:'58%'}});
+
+  new Chart(c1_sales,{data:{labels:labels24,datasets:[
+    {type:'bar',label:'销售额($)',data:rev24,backgroundColor:BLUE,yAxisID:'y',order:2},
+    {type:'line',label:'销量(件)',data:qty24,borderColor:NAVY,backgroundColor:NAVY,tension:.3,yAxisID:'y1',order:1,pointRadius:2}
+  ]},options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{position:'bottom'}},scales:{y:{position:'left',ticks:{callback:v=>'$'+(v/1e6)+'M'}},y1:{position:'right',grid:{drawOnChartArea:false}}}}});
+
+  new Chart(c1_price,{data:{labels:labels24,datasets:[
+    {type:'bar',label:'价格同比(%)',data:priceYoY,backgroundColor:priceYoY.map(v=>v>=0?'rgba(63,125,90,.55)':'rgba(180,86,74,.55)'),yAxisID:'y1',order:2},
+    {type:'line',label:'平均价格($)',data:price24,borderColor:NAVY,backgroundColor:NAVY,tension:.3,yAxisID:'y',order:1,pointRadius:2}
+  ]},options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{position:'bottom'}},scales:{y:{position:'left',ticks:{callback:v=>'$'+v}},y1:{position:'right',grid:{drawOnChartArea:false},ticks:{callback:v=>v+'%'}}}}});
+
+  new Chart(c1_season,{type:'bar',data:{labels:['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],datasets:[{label:'同月平均销售额($)',data:[953972,1045163,1795388,2619934,2967007,2989065,2661306,1749053,1221354,1156560,2289313,2859286],backgroundColor:['#9DB2C9','#9DB2C9','#5B7DA6','#0A2540','#0A2540','#0A2540','#5B7DA6','#9DB2C9','#C5D1E0','#C5D1E0','#5B7DA6','#0A2540']}]},options:{maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>'$'+(v/1e6)+'M'}}}}});
+
+  const gl=['24-06','24-07','24-08','24-09','24-10','24-11','24-12','25-01','25-02','25-03','25-04','25-05','25-06','25-07','25-08','25-09','25-10','25-11','25-12','26-01','26-02','26-03','26-04','26-05'];
+  const gv=[2,1,1,1,1,1,1,1,1,1,2,2,2,2,1,1,1,1,1,1,1,2,3,3];
+  new Chart(c1_google,{type:'line',data:{labels:gl,datasets:[{label:'搜索指数 golf push cart',data:gv,borderColor:BLUE,backgroundColor:'rgba(91,125,166,.15)',fill:true,tension:.35,pointRadius:2}]},options:{maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}});
+
+  // ============ 第三章 图表 ============
+  new Chart(c3_share,{type:'doughnut',data:{labels:['手推车 82.2%','电动手推车 14.9%','简易手推车 2.9%'],datasets:[{data:[82.2,14.9,2.9],backgroundColor:[NAVY,BLUE,SOFT]}]},options:{maintainAspectRatio:false,layout:{padding:6},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>c.label.replace(/ [\d.]+%/,'')+': '+c.raw+'%'}}},cutout:'58%'}});
+
+  const push24=[2403796,2529631,2251387,1374418,1041760,1048509,1240746,2356853,650996,878831,1683883,2471435,2616934,2652524,2280867,1556288,1052847,804895,1695555,2391169,955993,797553,1409413,2201633];
+  const elec24=[363850,324202,249200,159500,79734,248321,837914,454713,76361,157601,155110,383970,409706,279033,336125,200329,167553,166016,762919,400313,178225,221925,224583,358561];
+  const simp24=[63079,96271,126655,81293,52769,25896,18218,54569,12082,18348,76241,88972,76648,96468,78378,126277,48045,19482,23273,60955,34286,16067,41545,94770];
+  new Chart(c3_trend,{type:'line',data:{labels:labels24,datasets:[
+    {label:'手推车',data:push24,borderColor:NAVY,backgroundColor:NAVY,tension:.3,pointRadius:0,borderWidth:2},
+    {label:'电动手推车',data:elec24,borderColor:BLUE,backgroundColor:BLUE,tension:.3,pointRadius:0,borderWidth:2},
+    {label:'简易手推车',data:simp24,borderColor:SOFT,backgroundColor:SOFT,tension:.3,pointRadius:0,borderWidth:2}
+  ]},options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{position:'bottom'}},scales:{y:{ticks:{callback:v=>'$'+(v/1e6)+'M'}}}}});
+
+  const fl=['可调节把手','固定绑带','轮子','杯架','雨伞支架/底座','储物隔间','记分卡夹','球钉收纳','网/布状收纳袋','储物袋','保温格','手机/GPS支架','球座','手动刹车','磁性钢垫','前轮','球标','雨伞收纳'];
+  const fv=[100,100,98,95,95,93,85,78,78,58,51,41,40,24,19,16,14,2];
+  const fc=fv.map(v=>v>90?NAVY:(v>=40?BLUE:'#B98A3E'));
+  new Chart(c3_feat,{type:'bar',data:{labels:fl,datasets:[{data:fv,backgroundColor:fc}]},options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.raw+'% 渗透率'}}},scales:{x:{max:100,ticks:{callback:v=>v+'%'}},y:{ticks:{font:{size:10},autoSkip:false}}}}});
+
+  // ============ 第二章 搜索词趋势 ============
+  if(window.c2_kw){
+    const km=['25-04','25-05','25-06','25-07','25-08','25-09','25-10','25-11','25-12','26-01','26-02','26-03','26-04'];
+    new Chart(c2_kw,{type:'line',data:{labels:km,datasets:[
+      {label:'golf push cart',data:[98038,95574,93181,91799,77866,62039,53418,61680,47777,45981,59400,87314,120378],borderColor:NAVY,backgroundColor:NAVY,tension:.3,pointRadius:0,borderWidth:2.5},
+      {label:'golf push cart 3 wheel',data:[23006,20493,19335,19517,15142,7536,5850,7015,6146,6533,8798,16749,22180],borderColor:'#B5894B',backgroundColor:'#B5894B',tension:.3,pointRadius:0,borderWidth:2},
+      {label:'golf bag cart',data:[17559,16863,16261,15379,16740,9705,6673,7000,5999,4868,6654,15560,25860],borderColor:BLUE,backgroundColor:BLUE,tension:.3,pointRadius:0,borderWidth:2}
+    ]},options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{position:'bottom'}},scales:{y:{ticks:{callback:v=>(v/1000)+'k'}}}}});
+  }
+
+  // ============ 第六章 差评主题 ============
+  if(window.c6_pain){
+    new Chart(c6_pain,{type:'bar',data:{labels:['前轮/球包兼容','质量/断裂','客服/售后','遥控/转向(电动)','稳定/坡道','折叠/展开','电池/续航(电动)'],datasets:[{data:[50,39,38,33,17,15,9],backgroundColor:['#A64A3E','#A64A3E','#B5894B','#B5894B','#5B7DA6','#5B7DA6','#9DB2C9']}]},options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.raw+'% 的差评提及'}}},scales:{x:{max:60,ticks:{callback:v=>v+'%'}},y:{ticks:{font:{size:11}}}}}});
+  }
+</script>
+
+
+</body></html>
