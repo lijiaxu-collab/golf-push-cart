@@ -149,6 +149,28 @@
   .lbl.hid{background:var(--accent-soft);color:var(--navy2);}
   .rev-blk .pt{font-size:13px;color:var(--navy2);margin-bottom:6px;line-height:1.65;}
   .quote{font-size:12px;color:var(--gray);border-left:2px solid var(--accent);padding:3px 0 3px 12px;margin:5px 0;font-style:italic;line-height:1.6;}
+  /* 差评下钻：聚类→问题点 */
+  .badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:3px;letter-spacing:.3px;}
+  .badge.real{background:#E1EDE5;color:#356B4F;}
+  .badge.fake{background:#F3E7D6;color:#9A6F33;}
+  .badge.mix{background:#E3EAF2;color:#2B4A6F;}
+  .badge.freq{background:var(--navy);color:#fff;}
+  details.drill{border:1px solid var(--line);border-radius:6px;margin-bottom:12px;overflow:hidden;background:var(--paper);}
+  details.drill>summary{cursor:pointer;padding:14px 18px;font-family:var(--serif);font-size:16px;font-weight:600;color:var(--navy);list-style:none;display:flex;align-items:center;gap:10px;background:var(--blue-soft);}
+  details.drill>summary::-webkit-details-marker{display:none;}
+  details.drill>summary::before{content:"+";color:var(--accent);font-size:18px;line-height:1;transition:transform .25s;}
+  details.drill[open]>summary::before{transform:rotate(45deg);}
+  details.drill>summary .ct{margin-left:auto;font-family:var(--sans);font-size:12px;font-weight:600;color:var(--gray);}
+  .drill-body{padding:6px 16px 14px;}
+  details.pp{border-top:1px solid var(--line);margin-top:8px;}
+  details.pp>summary{cursor:pointer;padding:11px 6px;font-size:13.5px;font-weight:700;color:var(--navy2);list-style:none;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  details.pp>summary::-webkit-details-marker{display:none;}
+  details.pp>summary::before{content:"▸";color:var(--accent);transition:transform .2s;}
+  details.pp[open]>summary::before{transform:rotate(90deg);}
+  .pp-body{padding:4px 4px 14px 18px;}
+  .solbox{margin-top:10px;background:var(--accent-soft);border-radius:5px;padding:10px 14px;font-size:12.5px;color:var(--navy2);line-height:1.7;}
+  .solbox b{color:var(--navy);}
+  .why{font-size:12.5px;color:var(--navy2);background:rgba(10,37,64,.03);border-radius:5px;padding:8px 12px;margin:6px 0;line-height:1.65;}
   /* 表格占位 */
   .tbl-ph{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;background:var(--paper);}
   .tbl-ph th,.tbl-ph td{border:1px solid var(--line);padding:9px 12px;text-align:left;}
@@ -321,9 +343,23 @@
     </div>
   </div>
 
+  <h3 class="block-title" style="font-size:18px;">B5 · 退货率 · 头部销量分布 · 广告成本</h3>
+  <div class="grid grid-4" style="margin-bottom:14px;">
+    <div class="card"><div class="kpi">3.85%</div><div class="kpi-label">类目退货率（低于同类目均值）</div></div>
+    <div class="card"><div class="kpi">4.51%</div><div class="kpi-label">同类目平均退货率（对照基准）</div></div>
+    <div class="card"><div class="kpi">$0.9–1.2</div><div class="kpi-label">长尾词广告 CPC（精准/非精准接近）</div></div>
+    <div class="card"><div class="kpi">2.6‰</div><div class="kpi-label">该类目搜索购买比</div></div>
+  </div>
+  <div class="grid grid-2">
+    <div class="finding" style="margin:0;"><strong>退货率健康：</strong>本类目退货率 <strong>3.85%</strong>，低于同类目均值 <strong>4.51%</strong>——属耐用标准品、退货风险较低，履约/售后压力小于服饰等高退货品类。</div>
+    <div class="finding" style="margin:0;"><strong>广告成本与转化：</strong>精准长尾词与非精准长尾词 CPC <strong>同在 $0.9–1.2</strong> 区间（长尾词竞价分化小、获量成本可控）；类目<strong>搜索购买比 2.6‰</strong>，需靠精细化选词与 Listing 转化弥补稀薄的点击-成交效率。</div>
+  </div>
+  <div class="finding" style="margin-top:14px;"><strong>头部销量分布（近12个月子体销售额 TOP10 ASIN · 旺季单月子体销量口径）：</strong>月销量 <strong>3K+ 1 款</strong>、<strong>1K+ 6 款</strong>、<strong>接近 1K 1 款</strong>（其余 2 款低于 800）。说明头部集中度高、单链接旺季可冲到数千件，但季节性强、月均会明显低于旺季峰值。</div>
+
   <div class="finding" style="margin-top:18px;">
     <strong>亚马逊市场结论：</strong>市场总量稳定，近12个月销售额约 <strong>2,484 万美元、同比 +2.9%</strong>，但销量同比 <strong>−4.4%</strong>——说明<strong>增长主要靠涨价而非走量</strong>，平均价格从约 $190 升至约 $210–235，价格中枢上移、消费升级（电动/高配化）趋势明显。
     需求<strong>季节性极强</strong>：旺季为 <strong>4–6 月（开球季）和 11–12 月（节日季）</strong>，淡季为 <strong>1–2 月和 9–10 月</strong>，谷歌搜索热度与销售曲线高度吻合，建议据此安排备货与广告节奏。
+    叠加 <strong>退货率仅 3.85%（低于均值 4.51%）、广告 CPC 可控（$0.9–1.2）</strong>，整体是一个<strong>风险可控、靠精细化运营取胜</strong>的市场。
   </div>
 </section>
 
@@ -549,12 +585,13 @@
         <summary>点击展开 · 手推车价格详细分析</summary>
         <div class="fold-body">
           <table class="data-tbl">
-            <tr><th>价格区间</th><th>ASIN数</th><th>销售额占比</th><th>销量</th><th>竞争力*</th></tr>
-            <tr><td>$30–150 入门</td><td>93</td><td>20.0%</td><td>33,150</td><td>356</td></tr>
-            <tr style="background:var(--blue-soft);"><td class="em">$156–242 主流</td><td>112</td><td class="em">59.8%</td><td>68,450</td><td class="em">611</td></tr>
-            <tr><td>$249–370 高端</td><td>34</td><td>20.2%</td><td>14,150</td><td>416</td></tr>
+            <tr><th>价格区间</th><th>ASIN数</th><th>销售额占比</th><th>销量</th><th>竞争力*</th><th>近6月新品</th><th>新品销售额占比</th></tr>
+            <tr><td>$30–150 入门</td><td>93</td><td>20.0%</td><td>33,150</td><td>356</td><td>3</td><td>0.8%</td></tr>
+            <tr style="background:var(--blue-soft);"><td class="em">$156–242 主流</td><td>112</td><td class="em">59.8%</td><td>68,450</td><td class="em">611</td><td class="em">9</td><td class="em">3.7%</td></tr>
+            <tr><td>$249–370 高端</td><td>34</td><td>20.2%</td><td>14,150</td><td>416</td><td>2</td><td>1.2%</td></tr>
           </table>
-          <p style="font-size:11.5px;color:var(--gray);margin:8px 0 14px;">*竞争力 = 区间销量 ÷ 区间ASIN数，越高表示单链接平均产出越好</p>
+          <p style="font-size:11.5px;color:var(--gray);margin:8px 0 14px;">*竞争力 = 区间销量 ÷ 区间ASIN数，越高表示单链接平均产出越好｜新品 = 上架时间近6个月</p>
+          <div class="finding"><strong>新品也在往主流段聚集：</strong>近6个月 14 款新品中 <strong>9 款落在 $156–242 主流段</strong>（新品销售额占该段 3.7%），入门/高端各仅 2–3 款——印证主流段是新入局者的首选战场。</div>
           <div class="finding">主流段（$156–242）拿下约 6 成销售额、单链接产出最高（611），是<strong>需求与盈利的甜蜜点</strong>。入门段走量但竞争分散、利润薄；高端段总量小。</div>
           <h4 style="font-size:13.5px;color:var(--navy2);margin:6px 0 6px;">价格天花板与品牌溢价</h4>
           <p style="font-size:13px;color:var(--navy2);">最低价 $30 / 最高价 $370 / 市场均价 $176。品牌溢价：Clicgear +73%、Bag Boy +53%、EASEGO +22%，Caddytek/KVV 接近均价——<strong>高端价位被欧美老牌占据，性价比段是中国卖家主场</strong>。</p>
@@ -584,12 +621,13 @@
         <summary>点击展开 · 电动手推车价格详细分析</summary>
         <div class="fold-body">
           <table class="data-tbl">
-            <tr><th>价格区间</th><th>ASIN数</th><th>销售额占比</th><th>销量</th><th>竞争力*</th></tr>
-            <tr><td>$549–697 低价</td><td>3</td><td>2.5%</td><td>150</td><td>50</td></tr>
-            <tr><td>$1007–1239 中段</td><td>3</td><td>21.8%</td><td>750</td><td>250</td></tr>
-            <tr style="background:var(--blue-soft);"><td class="em">$1545–1695 高端</td><td>4</td><td class="em">75.7%</td><td>1,750</td><td class="em">438</td></tr>
+            <tr><th>价格区间</th><th>ASIN数</th><th>销售额占比</th><th>销量</th><th>竞争力*</th><th>近6月新品</th><th>新品销售额占比</th></tr>
+            <tr><td>$549–697 低价</td><td>3</td><td>2.5%</td><td>150</td><td>50</td><td>0</td><td>0%</td></tr>
+            <tr><td>$1007–1239 中段</td><td>3</td><td>21.8%</td><td>750</td><td>250</td><td>0</td><td>0%</td></tr>
+            <tr style="background:var(--blue-soft);"><td class="em">$1545–1695 高端</td><td>4</td><td class="em">75.7%</td><td>1,750</td><td class="em">438</td><td>0</td><td>0%</td></tr>
           </table>
-          <p style="font-size:11.5px;color:var(--gray);margin:8px 0 14px;">*竞争力 = 区间销量 ÷ 区间ASIN数</p>
+          <p style="font-size:11.5px;color:var(--gray);margin:8px 0 14px;">*竞争力 = 区间销量 ÷ 区间ASIN数｜新品 = 上架时间近6个月</p>
+          <div class="finding"><strong>电动各价位近6个月均无新品进入</strong>——再次印证电动赛道是高门槛封闭市场，价格区间格局由现有寡头锁定。</div>
           <div class="finding">与直觉相反，<strong>越贵越好卖</strong>：$1545+ 高端段占近 8 成销售额、单链接产出最高（438）。说明买电动机型的人<strong>愿为性能/品牌付高价，低价低配反而不被信任</strong>。</div>
           <h4 style="font-size:13.5px;color:var(--navy2);margin:6px 0 6px;">价格天花板与品牌溢价</h4>
           <p style="font-size:13px;color:var(--navy2);">最低价 $549 / 最高价 $1695 / 中位 $1167。龙头 MGI 主打 $1500+ 高端，KVV 以更低价位切入中段——<strong>高端由 MGI 定义，价格天花板高、利润空间大</strong>。</p>
@@ -635,50 +673,187 @@
   </div>
   <div class="finding" style="margin-top:14px;">社媒原声佐证：<span style="font-style:italic;">“坡道上一定要选手刹而不是脚刹，方便太多。”</span>（TikTok）·<span style="font-style:italic;">“折叠要小、没有多余零件，这点最重要。”</span>（Reddit）·<span style="font-style:italic;">“我也想开始走路打球，但球友都习惯坐车……”</span>（YouTube）——印证<strong>“轻松走路 + 易收纳 + 手刹便利”</strong>是核心动机。</div>
 
-  <h3 class="block-title">C. 差评分析（1–3星高频问题）</h3>
-  <div class="tag-row"><span class="src">数据来源：人群画像.xlsx · 产品评论表（差评 138 条）</span></div>
-  <div class="grid grid-2">
-    <div class="chart-box">
-      <div class="ch-title">差评高频主题占比</div>
-      <div class="ch-note">单条差评可涉及多个主题</div>
-      <div class="chart-wrap" style="height:260px;"><canvas id="c6_pain"></canvas></div>
+  <h3 class="block-title">C. 差评分析（手动手推车 · 问题点下钻）</h3>
+  <div class="tag-row">
+    <span class="src">数据来源：高尔夫手推车_评论问题点分析矩阵.xlsx</span>
+    <span class="src">口径：711 条评论中手动款 509 条，差评(≤3★) 94 条 ≈ 18.5%（已剔除电动遥控款 202 条）</span>
+  </div>
+  <div class="grid grid-4" style="margin-bottom:16px;">
+    <div class="card"><div class="kpi">94 条</div><div class="kpi-label">手动款差评（≤3★）· 占比 18.5%</div></div>
+    <div class="card"><div class="kpi">前轮偏置</div><div class="kpi-label">头号痛点 · 占差评约 1/4</div></div>
+    <div class="card"><div class="kpi">9 项</div><div class="kpi-label">真需求（含设计/运营/场景向）</div></div>
+    <div class="card"><div class="kpi">3 项</div><div class="kpi-label">伪需求 / 部分伪（慎投入）</div></div>
+  </div>
+  <div class="chart-box" style="margin-bottom:18px;">
+    <div class="ch-title">各问题点差评数（≤3★）· 概览</div>
+    <div class="ch-note">深蓝 = 真需求 ｜ 蓝 = 真伪混合 ｜ 金 = 伪需求　·　点击下方分类可下钻看频次与用户原声</div>
+    <div class="chart-wrap" style="height:300px;"><canvas id="c6_pain"></canvas></div>
+  </div>
+
+  <p style="font-size:13px;color:var(--gray);margin-bottom:12px;">点击任一<strong>分类</strong>展开，再点具体<strong>问题点</strong>，可看到提及数/差评数、真伪判定理由与约 5 条用户原声：</p>
+
+  <!-- 聚类一 -->
+  <details class="drill">
+    <summary>聚类一 · 结构与机构（根因类）<span class="ct">5 个问题点 · 差评 58 条</span></summary>
+    <div class="drill-body">
+      <details class="pp" open>
+        <summary>C1　前轮偏置设计 → 磨包 + 跑偏/不走直线 <span class="badge freq">提及62 · 差评24</span><span class="badge real">真需求</span></summary>
+        <div class="pp-body">
+          <div class="why"><b>涉及部件：</b>前轮、前轮支架、底座（占差评 25.5%）　|　<b>判定理由：</b>最高频、跨多款式复现的结构性根因——前轮偏置在包侧方而非正下方，导致①包底持续摩擦刮蹭前轮、②负载后重心偏移持续向一侧跑偏需每几步纠偏。多数用户按说明调整仍无效（甚至拧花内六角），无法自行解决，直接阻断"推得动、走得直"的核心功能，是退货首要原因。</div>
+          <div class="quote">“前轮紧贴包侧、磨包导致极难推，老玩家直接弃用。”（1★）</div>
+          <div class="quote">“任何包放上去都蹭前轮且无从调整，被迫将就。”（1★）</div>
+          <div class="quote">“偏置前轮是最大问题，影响平衡/转向且必然磨包。”（1★）</div>
+          <div class="quote">“反复调前轮仍向右跑偏，超过退货期只能认栽。”（1★）</div>
+          <div class="quote">“装上球杆后重心偏移持续右拉，要边走边往左推。”（1★）</div>
+        </div>
+      </details>
+      <details class="pp">
+        <summary>C2　展开/折叠困难 · 开合锁不住 <span class="badge freq">提及≈30 · 差评17</span><span class="badge real">真需求</span></summary>
+        <div class="pp-body">
+          <div class="why"><b>涉及部件：</b>折叠机构、锁止卡扣/插销、把手锁（占差评 18.1%）　|　<b>判定理由：</b>开箱即用第一环节即受挫——打不开、需看视频硬掰；使用中自动收合、锁不住、折叠后弹开。高频且体验前置的硬伤，力气小的用户直接劝退退货，是仅次于前轮的结构痛点。</div>
+          <div class="quote">“开箱打不开，看视频折腾半天，整车笨重，立即退货。”（1★）</div>
+          <div class="quote">“开箱无法展开，说明少，用力摇把手带断裂，退货。”（1★）</div>
+          <div class="quote">“使用中车身不断自动收合，极其令人沮丧。”（1★）</div>
+          <div class="quote">“折叠展开都费劲，最糟的是合不上、抬起会自己弹开。”（2★）</div>
+          <div class="quote">“开合一直出问题，塑料旋钮拧花后卡不住，一年即弃。”（1★）</div>
+        </div>
+      </details>
+      <details class="pp">
+        <summary>C4　整体做工廉价 / 早期失效 <span class="badge freq">提及≈19 · 差评10</span><span class="badge real">真需求</span></summary>
+        <div class="pp-body">
+          <div class="why"><b>涉及部件：</b>车架、塑料连接件、整机（占差评 10.6%）　|　<b>判定理由：</b>大量"用 2–4 次/首环/数月即坏"的早期失效：塑料感强、车架晃、关键连接件断裂导致整车报废。指向用料与耐久不达价位预期，是品牌口碑与复购的核心风险。</div>
+          <div class="quote">“丈夫用了 1 个月就坏。”（1★）</div>
+          <div class="quote">“用两次就坏。”（1★）</div>
+          <div class="quote">“前轮用 4–5 次就弯曲断裂。”（1★）</div>
+          <div class="quote">“用几次就散架，别买。”（3★）</div>
+          <div class="quote">“用 3–4 次就坏、再也锁不住，30 天后几乎找不到售后。”（1★）</div>
+        </div>
+      </details>
+      <details class="pp">
+        <summary>C8　刹车难踩 / 刹车卡扣易断 <span class="badge freq">提及≈8 · 差评4</span><span class="badge real">真需求</span></summary>
+        <div class="pp-body">
+          <div class="why"><b>涉及部件：</b>脚刹、刹车卡扣、前轮锁杆（占差评 4.3%）　|　<b>判定理由：</b>低频但指向明确的可用性问题——脚刹位置过低/紧贴前轮难踩；多名用户指出锁前轮拨杆与刹车拨杆位置"装反了"；刹车卡扣为塑料件易断。低成本即可优化，体验收益明确。</div>
+          <div class="quote">“设计者似乎没用过：刹车为何在最底下、很别扭。”（4★）</div>
+          <div class="quote">“做工偏廉价、轮子发飘，刹车紧贴前轮难用脚够到。”（3★）</div>
+          <div class="quote">“刹车不锁、固定带断、推车时把手会自动收下。”（1★）</div>
+          <div class="quote">“脚刹偏难够，最好在把手再加一个刹车杆。”（2★）</div>
+          <div class="quote">“不解为何把锁前轮的拨杆和刹车拨杆位置设计反了。”（4★）</div>
+        </div>
+      </details>
+      <details class="pp">
+        <summary>C11　湿草屑卡前轮 · 湿场难推 <span class="badge freq">提及≈5 · 差评3</span><span class="badge real">真需求·场景向</span></summary>
+        <div class="pp-body">
+          <div class="why"><b>涉及部件：</b>前轮与车架间隙（占差评 3.2%）　|　<b>判定理由：</b>前轮与车架间隙过小，湿草/泥屑卷入卡死前轮，湿场几乎推不动，有用户需随身带螺丝刀清理。与前轮结构强相关，是潮湿球场场景的真实硬伤。</div>
+          <div class="quote">“草坪修剪后前轮设计会卷入草屑卡死前轮。”（3★）</div>
+          <div class="quote">“前轮与车架间隙极小，湿场卡草屑泥叶、几乎推不动。”（3★）</div>
+          <div class="quote">“湿草屑卡在前轮与车架之间，整车无法使用。”（1★）</div>
+          <div class="quote">“湿草会粘在前轮上（需先拆伞架才能折叠）。”（4★）</div>
+          <div class="quote">“前轮对不准多次重调仍不正、短草也费力。”（3★）</div>
+        </div>
+      </details>
     </div>
-    <div>
-      <div class="finding"><strong>① 前轮 / 球包兼容（50%）：</strong>前轮偏移或位置不可调，导致球包底部摩擦轮子——手推车第一大痛点。
-        <div class="quote">“即使前轮旋转到正确位置，包底也会摩擦……一些设计缺陷使它成了昂贵的车库装饰品。”（EASEGO）</div>
-        <div class="quote">“前轮偏移是最大的问题，很多包会摩擦轮子、弄乱你的包。”（EASEGO）</div>
-        <div class="quote">“任何包都会摩擦前轮、完全无法调节？你在开玩笑吗。”（EASEGO）</div>
-        <div class="quote">“前轮紧邻球袋会摩擦，推起来非常困难，基本变成两轮推车。”（EASEGO）</div>
-        <div class="quote">“无论怎么调前轮都往左拉。”（Caddytek）</div>
-        <div class="quote">“并不适合所有球包，我的 Titleist 立包不能稳固固定。”（MGI）</div>
-        <div class="quote">“侧坡会往下坡跑、不直行，这台需要两个前轮。”（KVV）</div>
-      </div>
-      <div class="finding"><strong>② 质量 / 断裂（39%）：</strong>塑料卡齿、手柄、绑带、锁销、螺丝等小部件易坏，到货缺件。
-        <div class="quote">“锁定推车打开的塑料齿，反复开合就会折断，导致推车无法使用。”（EASEGO）</div>
-        <div class="quote">“只玩了三轮就断了一块，现在无法使用。”（EASEGO）</div>
-        <div class="quote">“手柄用一次就脱落。”（Caddytek）</div>
-        <div class="quote">“寄来时少了一个轮子，质量很差。”（Caddytek）</div>
-        <div class="quote">“缺少保持展开的锁销，推车会自己啪地合上。”（Caddytek）</div>
-        <div class="quote">“用一个月右轴磨擦异响。”（MGI）</div>
-        <div class="quote">“支撑结构的三颗螺丝几次使用后就脱落、丢失难更换。”（KVV）</div>
-      </div>
-      <div class="finding"><strong>③ 客服 / 售后（38%）：</strong>响应慢、配件不能单独补发、保修不兑现，电动品类尤其突出。
-        <div class="quote">“储物袋带撕断、包夹失灵，联系客服几乎得不到回应。”（Caddytek）</div>
-        <div class="quote">“找不到 Easego 公司、没有客服、买不到零件。”（EASEGO）</div>
-        <div class="quote">“卖家让找厂家、厂家不回电，对在亚马逊购买失去信心。”（MGI）</div>
-        <div class="quote">“客服电话等一分钟就挂断。”（MGI）</div>
-        <div class="quote">“主板坏了等零件一个多月，3年保修没兑现。”（MGI）</div>
-        <div class="quote">“遥控裂了，亚马逊客服无法直接帮我更换。”（KVV）</div>
-      </div>
-      <div class="finding" style="margin-bottom:0;"><strong>④ 遥控 / 转向（33%，电动）：</strong>遥控迟钝、转向不顺、睡眠模式难唤醒、溜车。
-        <div class="quote">“进入睡眠模式根本弄不出来，搞不清怎么从手动切到远程。”（KVV）</div>
-        <div class="quote">“遥控反应非常不灵敏、有延迟，更像没有遥控器的电动推车。”（KVV）</div>
-        <div class="quote">“转弯靠停一个轮转另一个轮，不平滑、难控制。”（KVV）</div>
-        <div class="quote">“没用过5次电池就没电、只能左转。”（MGI）</div>
-        <div class="quote">“遥控按一下跳两档，步速9只能手动设。”（MGI）</div>
-        <div class="quote">“锁定遥控后还会自己滚下坡冲进湖里、没有防抱死。”（MGI）</div>
-      </div>
+  </details>
+
+  <!-- 聚类二 -->
+  <details class="drill">
+    <summary>聚类二 · 固定与配件 <span class="ct">2 个问题点 · 差评 22 条</span></summary>
+    <div class="drill-body">
+      <details class="pp">
+        <summary>C3　固定带/弹力绳 · 包固定不牢易坏 <span class="badge freq">提及≈20 · 差评10</span><span class="badge real">真需求·设计向</span></summary>
+        <div class="pp-body">
+          <div class="why"><b>涉及部件：</b>上/下固定带、弹力绳、上夹臂（占差评 10.6%）　|　<b>判定理由：</b>固包是手推车核心功能。普遍反映用弹力绳替代绑带，坡道/侧坡上包会甩落；弹力绳日晒易老化先于整车损坏；上夹臂卡不住立式包。属设计选型问题（弹力绳 vs 绑带），非个例，多人自行更换绑带。</div>
+          <div class="quote">“用弹力绳替代绑带，没在陡坡包就掉了，已更换他款。”（3★）</div>
+          <div class="quote">“刹车不锁、固定带断、推车时把手会自动收下。”（1★）</div>
+          <div class="quote">“上夹臂卡不住立式包，包固定不住、会移位，已退货。”（1★）</div>
+          <div class="quote">“用 3 次小提带就断，想联系厂家却打不通。”（2★）</div>
+          <div class="quote">“偏重、难展开、走不直，固定带很难拉到能扣住。”（2★）</div>
+        </div>
+      </details>
+      <details class="pp">
+        <summary>C5　配件质量差（杯架裂/冷藏箱/收纳袋/伞架） <span class="badge freq">提及84 · 差评12</span><span class="badge mix">真伪混合</span></summary>
+        <div class="pp-body">
+          <div class="why"><b>涉及部件：</b>杯架、冷藏箱、保温袋、伞架、记分卡座（占差评 12.8%）　|　<b>判定理由（需拆分）：</b>①杯架开裂/卡不住 = <b style="color:#356B4F;">真需求</b>（高频、首用即坏的结构缺陷）；②收纳/保温袋缝线开口、冷藏箱缝合不全 = <b style="color:#356B4F;">真需求</b>（品控+用料）；③冷藏箱"鸡肋"、伞架要加购延长杆、记分卡座偏小 = <b style="color:#9A6F33;">伪需求</b>（单点主观抱怨/加购心理落差，非核心功能，优先级低）。</div>
+          <div class="quote">“配件做工极差：杯架首月开裂、伞架内部小塑料件总掉。”（1★）</div>
+          <div class="quote">“杯架到货即裂成两半，却只能整车退、无法单买杯架。”（1★）</div>
+          <div class="quote">“杯架设计缺陷锁不住会翻转，为放水杯纠结后整车退货。”（3★）</div>
+          <div class="quote">“仅用 4 个月保温袋一角就裂开，超过退货期。”（2★）</div>
+          <div class="quote">“冷藏袋缝线没缝到底、留有开口（漏缝非撕裂）。”（2★）</div>
+        </div>
+      </details>
     </div>
+  </details>
+
+  <!-- 聚类三 -->
+  <details class="drill">
+    <summary>聚类三 · 使用场景与人机 <span class="ct">3 个问题点 · 差评 15 条</span></summary>
+    <div class="drill-body">
+      <details class="pp">
+        <summary>C9　坡道/侧坡稳定性 · 易翻倒掉包 <span class="badge freq">提及≈10 · 差评5</span><span class="badge real">真需求·场景向</span></summary>
+        <div class="pp-body">
+          <div class="why"><b>涉及部件：</b>三轮底盘、前轮、重心（占差评 5.3%）　|　<b>判定理由：</b>横坡时包向下侧甩落、上坡易失衡倾倒，三轮结构在非平整/坡地场景稳定性不足。属真实使用场景痛点，与目标用户实际球场条件强相关。</div>
+          <div class="quote">“走偏不可调还能忍，但上侧坡时包会直接往下侧甩落。”（2★）</div>
+          <div class="quote">“上坡极易失衡，已无数次翻倒、东西撒一地。”（3★）</div>
+          <div class="quote">“默认前轮在杆左侧、杆很不稳还刮包，折腾几轮才弄明白。”（3★）</div>
+          <div class="quote">“折叠展开都难，稳定性也不佳。”（3★）</div>
+          <div class="quote">“做工偏廉价、轮子发飘，刹车紧贴前轮难用脚够到。”（3★）</div>
+        </div>
+      </details>
+      <details class="pp">
+        <summary>C10　组装难 / 说明书不清 <span class="badge freq">提及≈8 · 差评5</span><span class="badge real">真需求·易改善</span></summary>
+        <div class="pp-body">
+          <div class="why"><b>涉及部件：</b>说明书、装配（占差评 5.3%）　|　<b>判定理由：</b>说明书不清晰/缺失、引导网址失效，导致装配受挫退货。属低成本可快速改善项（完善图文/视频说明），改善后可直接降低开箱差评。</div>
+          <div class="quote">“无说明书根本没法组装，退货。”（1★）</div>
+          <div class="quote">“很难安装。”（1★）</div>
+          <div class="quote">“说明书不清晰不直观、组装麻烦（客服响应尚好）。”（3★）</div>
+          <div class="quote">“说明书极不具体、照做却装坏，且折不到宣称的小体积。”（1★）</div>
+          <div class="quote">“笨重、拆不开，说明书上的帮助网址根本不存在。”（1★）</div>
+        </div>
+      </details>
+      <details class="pp">
+        <summary>C12　偏重/笨重 · 难以单手提 <span class="badge freq">提及≈21 · 差评5</span><span class="badge fake">伪需求</span></summary>
+        <div class="pp-body">
+          <div class="why"><b>涉及部件：</b>整机重量、体积（占差评 5.3%）　|　<b>判定理由（伪需求）：</b>多为预期落差——宣传图"单手提起"、实际偏重需双手，抱怨核心是营销与认知差而非功能缺陷；多数仍给 4 星并继续使用。属"宣传管理"而非"减重设计"问题，硬减重可能牺牲稳定性。</div>
+          <div class="quote">“偏重、难展开、走不直，固定带很难拉到能扣住。”（2★）</div>
+          <div class="quote">“若想要轻量好装好用的推车，这款不适合你。”（2★）</div>
+          <div class="quote">“宣传单手提是个笑话，实际需双手且仍偏重。”（3★）</div>
+          <div class="quote">“很好用一键折叠很稳，但要有心理准备——它很重。”（4★）</div>
+          <div class="quote">“底座过小只适配很小的包，普通尼龙包会移位并蹭前轮。”（2★）</div>
+        </div>
+      </details>
+    </div>
+  </details>
+
+  <!-- 聚类四 -->
+  <details class="drill">
+    <summary>聚类四 · 服务与品控（运营类）<span class="ct">2 个问题点 · 差评 19 条</span></summary>
+    <div class="drill-body">
+      <details class="pp">
+        <summary>C7　客服/质保差 · 配件无处可买 <span class="badge freq">提及≈15 · 差评12</span><span class="badge real">真需求·运营向</span></summary>
+        <div class="pp-body">
+          <div class="why"><b>涉及部件：</b>售后、质保、备件供应（占差评 12.8%）　|　<b>判定理由：</b>高频且放大效应强——小故障本可换件解决，却因联系不上、不回复、无单独备件出售而被迫整车退货并打差评。属运营/售后体系缺口，是把"小问题"升级为"差评"的关键杠杆，改善 ROI 高。</div>
+          <div class="quote">“用 3 轮后断件报废，Amazon 与厂家均无售后可联系。”（1★）</div>
+          <div class="quote">“前轮锁不住不支撑包，退货后被重复扣款且联系不上。”（1★）</div>
+          <div class="quote">“2 轮后多处损坏，联系售后几轮后被已读不回/套话敷衍。”（1★）</div>
+          <div class="quote">“轮子多次脱落丢失，质保期内两次联系 EASEGO 均无回应。”（1★）</div>
+          <div class="quote">“用几个月就停摆，客服几乎不存在，多次尝试才联系上。”（1★）</div>
+        </div>
+      </details>
+      <details class="pp">
+        <summary>C6　到货缺件/损坏 · 螺丝螺母松脱 <span class="badge freq">提及≈11 · 差评7</span><span class="badge fake">伪需求</span></summary>
+        <div class="pp-body">
+          <div class="why"><b>涉及部件：</b>螺丝螺母、稳定杆、插销、整机包装（占差评 7.4%）　|　<b>判定理由（就"产品设计改进"而言为伪需求）：</b>表现为发货缺件、运输损坏、螺母未拧紧丢失，根因在装配品控与物流包装，而非产品结构设计本身。对研发是"出厂检验/包装"改进项，不应误读为设计需求。</div>
+          <div class="quote">“开箱即有断件、出厂 defective，只能退、无法换件。”（1★）</div>
+          <div class="quote">“到货缺锁止插销（本应固定的永久件），车合不住。”（1★）</div>
+          <div class="quote">“发货缺一只轮子，整体感觉品质差。”（1★）</div>
+          <div class="quote">“开箱特卖缺底部稳定杆螺母，不想退却不知如何补件。”（1★）</div>
+          <div class="quote">“到货多颗螺母松动，没察觉就丢了几颗、还掉了螺栓。”（3★）</div>
+        </div>
+      </details>
+    </div>
+  </details>
+
+  <div class="finding" style="margin-top:14px;background:var(--paper);border-left-color:var(--navy);">
+    <strong>真伪需求小结：</strong><b style="color:#356B4F;">真需求（优先研发）</b>——前轮偏置、折叠开合锁止、固定带选型、整机耐久、刹车可用性、坡道稳定、湿草卡轮，均为高频/根因/阻断核心功能；<b style="color:#356B4F;">运营性真需求</b>——客服/质保/备件供应缺口，改善 ROI 高；<b style="color:#9A6F33;">伪需求（慎投入）</b>——到货缺件/运损（属品控物流）、偏重（多为宣传预期差）、冷藏箱鸡肋/伞架加购（单点主观抱怨），不应误判为设计需求、避免资源错配。
   </div>
 
   <h3 class="block-title">D. 隐性需求（4–5星里"希望增加/改善"）</h3>
@@ -744,6 +919,8 @@
       <tr><td>配送方式</td><td>FBA</td><td>AMZ自营</td><td>FBM+AMZ</td><td>FBA</td></tr>
       <tr><td>月销量(估)</td><td class="em">~1033</td><td>~467</td><td>~100</td><td>~50</td></tr>
       <tr><td>月销售额(估)</td><td class="em">$216K</td><td>$85K</td><td>$168K</td><td>$85K</td></tr>
+      <tr><td>单件利润</td><td>$24.87</td><td>$24.2</td><td class="em">$649</td><td class="em">$450.6</td></tr>
+      <tr><td>利润率</td><td>14.6%</td><td>13.8%</td><td class="em">38%</td><td class="em">36.4%</td></tr>
       <tr><td>上架时间</td><td>2024-11</td><td>2021-12</td><td>2024-02</td><td>2024-11</td></tr>
       <tr style="background:#EEF2F7;"><td class="em">轮子</td><td>三轮</td><td>三轮</td><td>四轮</td><td>三轮+2辅助轮</td></tr>
       <tr><td>前轮(360°旋转)</td><td class="no">—</td><td class="yes">✓</td><td class="no">—</td><td class="yes">✓</td></tr>
@@ -768,6 +945,7 @@
     </table>
   </div>
   <div class="finding" style="margin-top:12px;">配置上 <strong>手推车（EASEGO/Caddytek）功能最全</strong>，电动车为减重/降本牺牲了部分收纳；Caddytek 独有“磁性钢垫+球标”细节，KVV 独有“球座收纳”。四款<strong>都没有“手刹”和“计分器”</strong>——正是第五章指出的高溢价、低渗透的差异化空白点。</div>
+  <div class="finding" style="margin-top:10px;background:var(--accent-soft);"><strong>利润视角：</strong>手推车单件利润薄、利润率也偏低——EASEGO $24.9 / 14.6%、Caddytek $24.2 / 13.8%；电动则<strong>单件利润与利润率双高</strong>——KVV $450.6 / 36.4%、MGI $649 / 38%。<strong>电动机型单件利润约为手推车的 18–27 倍，利润率高出近 1.5 倍</strong>。这说明手推车要靠<strong>走量 + 差异化提价</strong>才能赚钱，电动则靠<strong>高客单高毛利</strong>，也解释了电动虽门槛高仍值得作为第二曲线布局。</div>
 
   <h3 class="block-title">B. 评论口碑对比（差评 / 好评 / 隐性需求）</h3>
   <div class="tag-row"><span class="src">数据来源：高尔夫推车评论.xlsx（按 ASIN 对应竞品）· 共 712 条评论</span></div>
@@ -944,14 +1122,21 @@
   </div>
 
   <h3 class="block-title">C. 核心用户痛点 & 多角度解决建议</h3>
+  <p style="font-size:13px;color:var(--gray);margin-bottom:8px;">按第六章 12 个问题点（C1–C12）的真伪判定，仅对<strong>真需求</strong>给出研发/运营解决建议；伪需求单列说明、避免资源错配。</p>
   <table class="data-tbl">
-    <tr><th>核心痛点</th><th>解决建议（不限类目的通用思路）</th></tr>
-    <tr><td class="em">前轮刮包、转向不顺</td><td>产品端：前轮默认对正 + 可微调 + 防刮护套；电动加双前轮提升侧坡转向。体验端：附 30 秒"前轮校准"图示卡，降低上手门槛。</td></tr>
-    <tr><td class="em">小部件易坏、到货缺件</td><td>供应链端：卡齿/锁销等关键件改金属；出厂全检。服务端：上线"配件单独购买/免费补发"页面，把退货变补件。</td></tr>
-    <tr><td class="em">坡道刹车不便</td><td>产品端：标配/选配手刹（兴奋型卖点）。营销端：主图与视频直接演示"坡道单手刹停"，对标竞品空白。</td></tr>
-    <tr><td class="em">售后响应慢（尤其电动）</td><td>运营端：24h 内响应承诺 + 本地化英文客服与说明书；用 A+/视频做"自助排障"内容，降客诉。</td></tr>
-    <tr><td class="em">电动：电池/电机可靠性</td><td>产品端：电池冗余设计 + 续航标注更保守可信；质保延长。信任端：用真实"丘陵18洞剩余电量"实测内容打消顾虑。</td></tr>
+    <tr><th style="min-width:170px;">核心痛点（对应问题点）</th><th>解决建议（不限类目的通用思路）</th></tr>
+    <tr><td class="em">C1·C11 前轮偏置：磨包 / 跑偏 / 湿草卡轮</td><td>产品端：前轮前移几何（接地点落在包前方）+ 车架固定挡板（详见下方专题）+ 加宽轮叉间隙排泥；出厂预校准前束、用户免工具旋钮微调（借鉴汽车四轮定位、办公椅调节）。体验端：附 30 秒"前轮校准"图示卡。</td></tr>
+    <tr><td class="em">C2 展开/折叠困难 · 开合锁不住</td><td>产品端：锁止件改金属/玻纤增强，一键阻尼折叠 + 到位"咔哒"反馈、防自动收合（借鉴婴儿车 YOYO、折叠自行车 Brompton 的单手收合与可靠卡扣）。</td></tr>
+    <tr><td class="em">C3 固定带/弹力绳 · 包固定不牢</td><td>产品端：弹力绳改尼龙绑带 + 快卸扣，上夹臂可调夹持范围、坡道防甩落（借鉴登山包 YKK 扣具、相机快装板的夹持设计）。</td></tr>
+    <tr><td class="em">C4 整机做工 / 早期失效</td><td>供应链端：关键承重与连接件改金属，整车疲劳/跌落测试达标、质保延长；用料对齐价位（借鉴消费电子可靠性、汽车耐久测试流程）。</td></tr>
+    <tr><td class="em">C5 配件质量（杯架/收纳/保温）</td><td>产品端：杯架改卡扣防呆 + 模块化快拆、可单独购买（借鉴 GoPro/MagSafe 配件生态）；收纳/保温袋用更厚面料 + 完整缝线 + 拉链/磁吸（户外背包工艺）。注：冷藏箱/伞架属伪需求，按需精简不强化。</td></tr>
+    <tr><td class="em">C8 刹车难踩 / 刹车卡扣易断</td><td>产品端：标配/选配<strong>手刹</strong>（兴奋型卖点，对标竞品空白）+ 刹车/锁轮拨杆位置人机优化、卡扣金属化。营销端：主图与视频演示"坡道单手刹停"。</td></tr>
+    <tr><td class="em">C9 坡道/侧坡稳定性 · 易翻掉包</td><td>产品端：加宽轮距 + 降低重心、可选四轮版、侧坡防甩落卡扣；如实标注适用坡度（场景化设计 + 预期管理）。</td></tr>
+    <tr><td class="em">C10 组装难 / 说明书不清</td><td>内容端：母语化图文 + 二维码视频 + 少步骤快装（借鉴 SaaS 新手引导 onboarding），修复失效的帮助链接——低成本直降开箱差评。</td></tr>
+    <tr><td class="em">C7 客服/质保差 · 配件无处可买（运营）</td><td>运营端：24h 内响应承诺 + 本地化英文客服与说明；上线<strong>配件单独 SKU 可买 / 免费补发</strong>，把整车退货变换件（借鉴小米/大疆配件商城 + 社区自助知识库）。</td></tr>
+    <tr style="background:rgba(181,137,75,.10);"><td class="em">电动专属：电池/电机可靠性 · 遥控/防溜车</td><td>产品端：电池冗余设计 + 续航保守标注 + 质保延长；遥控固件优化降迟钝、加电子驻坡/防抱死（借鉴汽车 Hill-hold）。信任端：真实"丘陵18洞剩余电量"实测内容打消顾虑。</td></tr>
   </table>
+  <div class="finding" style="margin-top:12px;background:var(--accent-soft);"><strong>伪需求（不投研发，仅做品控/宣传）：</strong>C6 到货缺件/螺丝松脱 → 归因装配品控 + 物流包装（出厂全检、防松螺母、缓冲包装），非设计问题；C12 偏重/笨重 → 宣传管理（如实标重量、强调"稳"而非"单手提"），硬减重反而牺牲稳定性。</div>
 
   <details class="fold" style="margin-top:16px;">
     <summary>专题展开 · 前轮"零刮包"结构解决方案（针对第一大痛点）</summary>
@@ -1160,9 +1345,15 @@
     ]},options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{position:'bottom'}},scales:{y:{ticks:{callback:v=>(v/1000)+'k'}}}}});
   }
 
-  // ============ 第六章 差评主题 ============
+  // ============ 第六章 差评问题点（按差评数） ============
   if(window.c6_pain){
-    new Chart(c6_pain,{type:'bar',data:{labels:['前轮/球包兼容','质量/断裂','客服/售后','遥控/转向(电动)','稳定/坡道','折叠/展开','电池/续航(电动)'],datasets:[{data:[50,39,38,33,17,15,9],backgroundColor:['#A64A3E','#A64A3E','#B5894B','#B5894B','#5B7DA6','#5B7DA6','#9DB2C9']}]},options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.raw+'% 的差评提及'}}},scales:{x:{max:60,ticks:{callback:v=>v+'%'}},y:{ticks:{font:{size:11}}}}}});
+    const pp=[
+      ['C1 前轮偏置磨包/跑偏',24,NAVY],['C2 折叠开合锁不住',17,NAVY],['C5 配件质量(杯架等)',12,BLUE],
+      ['C7 客服质保/无备件',12,NAVY],['C3 固定带不牢易坏',10,NAVY],['C4 做工廉价/早期失效',10,NAVY],
+      ['C6 到货缺件/螺丝松脱',7,'#B5894B'],['C9 坡道侧坡稳定性',5,NAVY],['C10 组装/说明书不清',5,NAVY],
+      ['C12 偏重/笨重',5,'#B5894B'],['C8 刹车难踩/卡扣断',4,NAVY],['C11 湿草卡前轮',3,NAVY]
+    ];
+    new Chart(c6_pain,{type:'bar',data:{labels:pp.map(x=>x[0]),datasets:[{data:pp.map(x=>x[1]),backgroundColor:pp.map(x=>x[2])}]},options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.raw+' 条差评(≤3★)'}}},scales:{x:{beginAtZero:true,ticks:{precision:0}},y:{ticks:{font:{size:11},autoSkip:false}}}}});
   }
 </script>
 </body>
