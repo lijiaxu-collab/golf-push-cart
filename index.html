@@ -1159,28 +1159,32 @@
             <line x1="70" y1="372" x2="58" y2="386"/><line x1="130" y1="372" x2="118" y2="386"/><line x1="190" y1="372" x2="178" y2="386"/><line x1="250" y1="372" x2="238" y2="386"/><line x1="430" y1="372" x2="418" y2="386"/><line x1="520" y1="372" x2="508" y2="386"/><line x1="610" y1="372" x2="598" y2="386"/><line x1="670" y1="372" x2="658" y2="386"/>
           </g>
 
-          <!-- 车架 -->
-          <line x1="575" y1="338" x2="438" y2="98" stroke="#0A2540" stroke-width="6" stroke-linecap="round"/>
-          <line x1="438" y1="98" x2="360" y2="84" stroke="#0A2540" stroke-width="6" stroke-linecap="round"/>
-          <line x1="560" y1="334" x2="175" y2="344" stroke="#0A2540" stroke-width="6" stroke-linecap="round"/>
-          <line x1="486" y1="214" x2="455" y2="336" stroke="#0A2540" stroke-width="5" stroke-linecap="round"/>
+          <!-- 车架主梁（前→后） -->
+          <line x1="175" y1="344" x2="575" y2="338" stroke="#0A2540" stroke-width="6" stroke-linecap="round"/>
+          <!-- 车把：自后轮向后上方伸出（推行方向在后） -->
+          <line x1="575" y1="338" x2="648" y2="150" stroke="#0A2540" stroke-width="6" stroke-linecap="round"/>
+          <line x1="648" y1="150" x2="712" y2="140" stroke="#0A2540" stroke-width="6" stroke-linecap="round"/>
+          <line x1="712" y1="140" x2="708" y2="158" stroke="#0A2540" stroke-width="6" stroke-linecap="round"/>
+          <!-- 上支撑梁（托住球包、连接车把） -->
+          <line x1="612" y1="232" x2="430" y2="336" stroke="#0A2540" stroke-width="5" stroke-linecap="round"/>
 
           <!-- 后轮(两只) -->
           <circle cx="602" cy="334" r="33" fill="#FBFAF6" stroke="#0A2540" stroke-width="2.2" opacity=".55"/>
           <circle cx="575" cy="338" r="36" fill="#FBFAF6" stroke="#0A2540" stroke-width="2.6"/>
           <circle cx="575" cy="338" r="9" fill="#0A2540"/>
 
-          <!-- 球包 -->
-          <path d="M300,312 L348,302 L420,156 Q424,144 412,142 L372,150 Q360,152 356,164 L292,300 Q288,310 300,312 Z" fill="#E7ECF2" stroke="#0A2540" stroke-width="2.4"/>
-          <g stroke="#0A2540" stroke-width="2" stroke-linecap="round" opacity=".8">
-            <line x1="378" y1="150" x2="402" y2="92"/><line x1="392" y1="148" x2="420" y2="96"/><line x1="365" y1="152" x2="384" y2="98"/>
+          <!-- 球包（沿车架斜躺，顶端靠近车把） -->
+          <path d="M326,342 L560,232 L536,184 L303,294 Z" fill="#E7ECF2" stroke="#0A2540" stroke-width="2.4" stroke-linejoin="round"/>
+          <!-- 球杆（自球包顶端伸向车把方向） -->
+          <g stroke="#0A2540" stroke-width="2" stroke-linecap="round" opacity=".85">
+            <line x1="528" y1="192" x2="590" y2="146"/><line x1="540" y1="198" x2="606" y2="150"/><line x1="552" y1="204" x2="620" y2="158"/>
           </g>
-          <circle cx="402" cy="92" r="5" fill="#0A2540" opacity=".8"/><circle cx="420" cy="96" r="5" fill="#0A2540" opacity=".8"/><circle cx="384" cy="98" r="5" fill="#0A2540" opacity=".8"/>
-          <text x="350" y="235" font-size="13" fill="#21456C" font-weight="700" transform="rotate(-20 350 235)">球包</text>
+          <circle cx="590" cy="146" r="5" fill="#0A2540" opacity=".85"/><circle cx="606" cy="150" r="5" fill="#0A2540" opacity=".85"/><circle cx="620" cy="158" r="5" fill="#0A2540" opacity=".85"/>
+          <text x="416" y="272" font-size="13" fill="#21456C" font-weight="700" transform="rotate(-25 416 272)">球包</text>
 
           <!-- 下托(抬高后移) ② -->
-          <path d="M286,300 L286,328 L352,328 L352,308" fill="none" stroke="#B5894B" stroke-width="5" stroke-linecap="round"/>
-          <line x1="286" y1="300" x2="276" y2="292" stroke="#B5894B" stroke-width="5" stroke-linecap="round"/>
+          <path d="M296,314 L300,348 L352,348 L350,326" fill="none" stroke="#B5894B" stroke-width="5" stroke-linecap="round"/>
+          <line x1="296" y1="314" x2="286" y2="306" stroke="#B5894B" stroke-width="5" stroke-linecap="round"/>
 
           <!-- 车架固定挡板 ③ -->
           <path d="M228,256 Q244,300 246,346 L262,346 Q260,298 246,254 Z" fill="url(#hatch)" stroke="#B5894B" stroke-width="2.4"/>
